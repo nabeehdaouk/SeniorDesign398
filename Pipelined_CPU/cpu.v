@@ -2,6 +2,8 @@ module cpu(
     input clk,                          //Clock for CPU
     input reset,                        //Global reset signal
     input [31:0] instruction_fetch,     //Instruction fetched from memory
+    output read_mem,                    //Read enable to memory
+    output write_mem,                   //Write enable to memory
     output carry,                       //Carry from addition or subtraction
     output [31:0] result,               //Result (either sent to mem, or just as an output)
     output [10:0] pc_wadrs              //Write address to write to memory
@@ -18,12 +20,13 @@ module cpu(
 
     
     reg [31:0] decode; //Stores the information being decoded
+    reg [31:0] execute;
+    reg [31:0] mem;
+    reg [31:0] write_back;
+    
     wire [10:0] branch_address; //Defines branch address, only taken if valid
     wire branch_valid; //Defines if the branch was valid or not
     wire program_status; //Defines the program status used for branches
-    reg src_type; //Source type (reg == 0, immediate == 1)
-    reg dest_type; //Destination type (reg == 0, memory == 1)
-    reg [2:0] opcode_type; //Opcode type
     
     psr program_status_register(
         .res(result),
@@ -40,21 +43,27 @@ module cpu(
     ); 
 
 
-    //Fetch - Load fetched command to be decoded
-    always @(posedge clk) begin : Fetch
+    //Decode - Load fetched command to be decoded
+    always @(posedge clk) begin : DEC
         decode <= instruction_fetch;
-    end
-
-    //Decode - Take fetched information and decode it
-    always @(posedge clk) begin : Decode
-        src_type <= decode[23]; //Set source type (reg == 0, immediate == 1)
-        dest_type <= decode[22]; //Set destination type (reg == 0, memory == 1) 
     end
     
     //Execute - Take decode info and execute (or grab additional info from memory)
+    always @(posedge clk) begin : EXE
+        execute <= instruction_fetch;
+    end
     
     //Mem - Access memory if needed
+    always @(posedge clk) begin : MEM
+        mem <= instruction_fetch;
+    end
     
     //Write 
+    always @(posedge clk) begin : WB
+        write_back <= instruction_fetch;
+    end
+    
+    assign read_mem = 1;
+    assign write_mem = 1;
     
 endmodule

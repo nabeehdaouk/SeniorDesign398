@@ -1,24 +1,29 @@
-module memory(data_read, w_mem, r_mem, w_address, r_address, clk, reset, data);
-    
-input [31:0] data;
-input clk, reset, w_mem, r_mem, w_address, r_address;
-output [32:0]data_read;
-reg [31:0] mem [2047:0]; //2048 addresses holding 32 bits of data
+module memory(input clk, 
+    input resetn,
+    input [10:0] w_adrs, r_adrs,
+    input [31:0] data_in,
+    input w_en, r_en,
+    output reg [31:0] data_out
+);
 
-
- 
-always @(posedge clk) begin: Read_Write_Memory
+    reg [31:0] mem [2047:0];
+    integer i;
     
-    if (reset) begin
-        data_read <= {32{1'b0}};
-    end else if (r_mem)begin
-        data_read <= mem[data[21:11]];
-    
-    end else if (w_mem) begin
-        mem[data[21:11]] <= data;
-    end 
-    
+    always @(posedge clk) begin: Read_Write_Memory
 
-end
-
+        if (!resetn) begin
+            data_out <= 0;
+            for(i = 0; i < 2048; i = i + 1) begin
+               mem[i] <= 0; 
+            end
+        end else begin
+            if(w_en) begin
+                mem[w_adrs] <= data_in;
+            end
+            if(r_en) begin
+               data_out <= mem[r_adrs];
+            end
+        end    
+    end
+    
 endmodule
