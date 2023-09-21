@@ -25,6 +25,9 @@ module cpu(
     reg [31:0] write_back;
     reg [10:0] pc_cnt;          //Stores program count
     
+    reg [31:0] file_reg_A [31:0];
+    reg [31:0] file_reg_B [31:0];
+    
     wire [10:0] branch_address; //Defines branch address, only taken if valid
     wire branch_valid;          //Defines if the branch was valid or not
     wire program_status;        //Defines the program status used for branches    
@@ -44,13 +47,18 @@ module cpu(
     ); 
 
 
-    //Decode - Load fetched command to be decoded
-    always @(posedge clk) begin : DEC
+    //Fetch - Load fetched command to be decoded
+    always @(posedge clk) begin : FETCH
         decode <= instruction_fetch;
     end
     
+    //Decode - Decode instruction, get any operands from file regs
+    always @(posedge clk) begin : DECODE
+        
+    end 
+    
     //Execute - Take decode info and execute (or grab additional info from memory)
-    always @(posedge clk) begin : EXE
+    always @(posedge clk) begin : EXECUTE
         execute <= instruction_fetch;
     end
     
