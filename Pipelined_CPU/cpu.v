@@ -36,7 +36,7 @@ module cpu(
 
     pc program_counter(
         .clk(clk),
-        .reset(reset),
+        .resetn(resetn),
         .branch_valid(branch_valid),
         .branch_address(branch_address),
         .cnt(pc_wadrs)
