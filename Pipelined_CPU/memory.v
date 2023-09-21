@@ -3,7 +3,7 @@ module memory(data_read, w_mem, r_mem, w_address, r_address, clk, reset, data);
 input [31:0] data;
 input clk, reset, w_mem, r_mem, w_address, r_address;
 output [32:0]data_read;
-reg [31:0] mem [2047:0];
+reg [31:0] mem [2047:0]; //2048 addresses holding 32 bits of data
 
 
  
