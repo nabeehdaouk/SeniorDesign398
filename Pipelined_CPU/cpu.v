@@ -1,12 +1,13 @@
 module cpu(
     input clk,                          //Clock for CPU
-    input reset,                        //Global reset signal
+    input resetn,                       //Global reset signal
     input [31:0] instruction_fetch,     //Instruction fetched from memory
     output read_mem,                    //Read enable to memory
     output write_mem,                   //Write enable to memory
     output carry,                       //Carry from addition or subtraction
     output [31:0] result,               //Result (either sent to mem, or just as an output)
-    output [10:0] pc_wadrs              //Write address to write to memory
+    output [10:0] mem_wadrs,            //Write address to memory
+    output [10:0] mem_radrs             //Read address to read from memory
 );
 
     localparam LOAD = 3'b111;
@@ -17,16 +18,16 @@ module cpu(
     localparam AND = 3'b010;
     localparam OR = 3'b001;
     localparam NOOP = 3'b000;
-
     
-    reg [31:0] decode; //Stores the information being decoded
+    reg [31:0] decode;          //Stores the information being decoded
     reg [31:0] execute;
     reg [31:0] mem;
     reg [31:0] write_back;
+    reg [10:0] pc_cnt;          //Stores program count
     
     wire [10:0] branch_address; //Defines branch address, only taken if valid
-    wire branch_valid; //Defines if the branch was valid or not
-    wire program_status; //Defines the program status used for branches
+    wire branch_valid;          //Defines if the branch was valid or not
+    wire program_status;        //Defines the program status used for branches    
     
     psr program_status_register(
         .res(result),
@@ -36,10 +37,10 @@ module cpu(
 
     pc program_counter(
         .clk(clk),
-        .reset(reset),
+        .resetn(resetn),
         .branch_valid(branch_valid),
         .branch_address(branch_address),
-        .cnt(pc_wadrs)
+        .cnt(pc_cnt)
     ); 
 
 
@@ -65,5 +66,6 @@ module cpu(
     
     assign read_mem = 1;
     assign write_mem = 1;
+    assign mem_radrs = pc_cnt;
     
 endmodule

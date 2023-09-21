@@ -1,11 +1,12 @@
-module memory(input clk, 
-    input resetn, //active low reset
-    input [10:0] w_adrs, //write address
-    input [10:0] r_adrs, //read address
-    input [31:0] data_in,//data in
-    input w_en, //write enable
-    input r_en, //read enable
-    output reg [31:0] data_out //data out
+module memory(
+    input clk,                  //Clock
+    input resetn,               //Active low reset
+    input [10:0] w_adrs,        //Write address
+    input [10:0] r_adrs,        //Read address
+    input [31:0] data_in,       //Data in
+    input w_en,                 //Write enable
+    input r_en,                 //Read enable
+    output reg [31:0] data_out  //Data out
 );
 
     reg [31:0] mem [2047:0];
