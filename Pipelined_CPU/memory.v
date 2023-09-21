@@ -1,9 +1,11 @@
 module memory(input clk, 
-    input resetn,
-    input [10:0] w_adrs, r_adrs,
-    input [31:0] data_in,
-    input w_en, r_en,
-    output reg [31:0] data_out
+    input resetn, //active low reset
+    input [10:0] w_adrs, //write address
+    input [10:0] r_adrs, //read address
+    input [31:0] data_in,//data in
+    input w_en, //write enable
+    input r_en, //read enable
+    output reg [31:0] data_out //data out
 );
 
     reg [31:0] mem [2047:0];
