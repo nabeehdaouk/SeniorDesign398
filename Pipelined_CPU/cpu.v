@@ -2,6 +2,7 @@ module cpu(
     input clk,                          //Clock for CPU
     input reset,                        //Global reset signal
     input [31:0] instruction_fetch,     //Instruction fetched from memory
+    output carry,                       //Carry from addition or subtraction
     output [31:0] result,               //Result (either sent to mem, or just as an output)
     output [10:0] pc_wadrs              //Write address to write to memory
 );
@@ -15,15 +16,19 @@ module cpu(
     localparam OR = 3'b001;
     localparam NOOP = 3'b000;
 
-    reg [31:0] decode; //Defines the information being decoded
+    
+    reg [31:0] decode; //Stores the information being decoded
     wire [10:0] branch_address; //Defines branch address, only taken if valid
     wire branch_valid; //Defines if the branch was valid or not
+    wire program_status; //Defines the program status used for branches
     reg src_type; //Source type (reg == 0, immediate == 1)
     reg dest_type; //Destination type (reg == 0, memory == 1)
     reg [2:0] opcode_type; //Opcode type
-
+    
     psr program_status_register(
-
+        .res(result),
+        .carry(carry),
+        .program_status(program_status)
     );
 
     pc program_counter(
@@ -45,5 +50,11 @@ module cpu(
         src_type <= decode[23]; //Set source type (reg == 0, immediate == 1)
         dest_type <= decode[22]; //Set destination type (reg == 0, memory == 1) 
     end
+    
+    //Execute - Take decode info and execute (or grab additional info from memory)
+    
+    //Mem - Access memory if needed
+    
+    //Write 
     
 endmodule
