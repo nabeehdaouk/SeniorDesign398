@@ -19,14 +19,14 @@ module cpu(
     localparam OR = 3'b001;
     localparam NOOP = 3'b000;
     
-    reg [31:0] decode;          //Stores the information being decoded
+    reg [31:0] decode;                  //Stores the information being decoded
     reg [31:0] execute;
     reg [31:0] mem;
     reg [31:0] write_back;
-    reg [10:0] pc_cnt;          //Stores program count
+    reg [10:0] pc_cnt;                  //Stores program count
     
     reg [31:0] file_reg_A [31:0];
-    reg [31:0] file_reg_B [31:0];
+    reg [31:0] file_reg_B [63:0];
     
     wire [10:0] branch_address; //Defines branch address, only taken if valid
     wire branch_valid;          //Defines if the branch was valid or not
