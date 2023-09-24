@@ -1,4 +1,4 @@
-module tb;
+module memory_tb;
     reg clk,resetn,w_en,r_en1,r_en2;
     reg [10:0]w_adrs,r_adrs1,r_adrs2;
     reg [31:0]data_in;
