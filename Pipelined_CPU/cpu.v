@@ -57,7 +57,7 @@ module cpu(
     
     
         //Decode - Decode instruction, get any operands from file regs
-    always @(posedge clk) begin : DECODE  //FIX ASSIGNMETS TO RIGHT LOCATIONS
+    always @(posedge clk) begin : DECODE 
         case (decode[23])//Source type bit
             1'b0: //reg
             begin
@@ -77,7 +77,7 @@ module cpu(
           case (decode[22])//Destination type bit
             1'b0: //reg
             begin
-                opperand2<= opperand1<=(decode[21])? file_reg_B[decode[20:16]] : file_reg_A[decode[15:11]];
+                opperand2<=(decode[21])? file_reg_B[decode[20:16]] : file_reg_A[decode[15:11]];
             end
             1'b1: //mem
             begin
@@ -88,8 +88,6 @@ module cpu(
                 opperand2<= {32{1'b0}};
             end
         endcase
-    
-        //BRANCH INSTRUCTION???
     end  
     
     //Execute - Take decode info and execute (or grab additional info from memory)
