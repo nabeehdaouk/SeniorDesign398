@@ -35,9 +35,10 @@ module cpu(
     reg [31:0] operand2;
     reg [31:0] execute_result;
     reg [31:0] mem_result;
+    reg execute_carry;
     
-    wire [10:0] branch_address; //Defines branch address, only taken if valid
-    wire branch_valid;          //Defines if the branch was valid or not
+    reg [10:0] branch_address; //Defines branch address, only taken if valid
+    reg branch_valid;          //Defines if the branch was valid or not
     wire [4:0] program_status;  //Defines the program status used for branches  
       
     
@@ -63,7 +64,7 @@ module cpu(
     
     //Decode - Decode instruction, get any operands from file regs
     always @(posedge clk) begin : DECODE
-        
+        execute <= decode;
         //Decode source
         if(decode[23]) begin
             operand1 <= {{21{1'b0}}, decode[10:0]};  //upper 21 bits 0 for ld immideate value
@@ -80,11 +81,104 @@ module cpu(
 
     end
     
+   
     //Execute - Take decode info and execute (or grab additional info from memory)
     always @(posedge clk) begin : EXECUTE
         mem <= execute;
         mem_result <= execute_result;
+        case(execute[31:29])
+            
+            BRANCH: begin
+                    case(execute[26:24])
+                        3'b111: begin                               //not-zero
+                                if (program_status[2] == 1'b0) begin
+                                    branch_address <= execute[21:11];
+                                    branch_valid <= 1'b1;
+                                end
+                                end
+                        3'b110: begin                               //even
+                                if (program_status[0] == 1'b0) begin
+                                    branch_address <= execute[21:11];
+                                    branch_valid <= 1'b1;
+                                end
+                                end
+                        3'b101: begin                               //positive
+                                if (program_status[3] == 1'b1) begin
+                                    branch_address <= execute[21:11];
+                                    branch_valid <= 1'b1;
+                                end
+                                end
+                        3'b100: begin                               //zero
+                                if (program_status[2] == 1'b1) begin
+                                    branch_address <= execute[21:11];
+                                    branch_valid <= 1'b1;
+                                end
+                                end
+                        3'b011: begin                               //no carry
+                                if (program_status[4] == 1'b0) begin
+                                    branch_address <= execute[21:11];
+                                    branch_valid <= 1'b1;
+                                end
+                                end
+                        3'b010: begin                               //parity even
+                                if (program_status[0] == 1'b0) begin
+                                    branch_address <= execute[21:11];
+                                    branch_valid <= 1'b1;
+                                end
+                                end
+                        3'b001: begin                               //parity odd
+                                if (program_status[0] == 1'b1) begin
+                                    branch_address <= execute[21:11];
+                                    branch_valid <= 1'b1;
+                                end
+                                end
+                        3'b000: begin                               //always
+                                    branch_address <= execute[21:11];
+                                    branch_valid <= 1'b1;
+                                end
+                        default: begin
+                            branch_address <= 0;
+                            branch_valid <= 0;
+                            end
+                        endcase
+                    end
+                    
+            ADD: {execute_carry,execute_result} <= operand1 + operand2; 
+            SUBTRACT: begin
+                        execute_result <= operand1 - operand2;
+                        execute_carry <= 1'b0;
+                        branch_address <= 0;
+                        branch_valid <= 0;
+                      end
+            AND: begin
+                    execute_result <= operand1 & operand2;
+                    execute_carry <= 1'b0;
+                    branch_address <= 0;
+                    branch_valid <= 0;
+                end 
+            OR: begin
+                    execute_result <= operand1 | operand2;
+                    execute_carry <= 1'b0;
+                    branch_address <= 0;
+                    branch_valid <= 0;
+                end
+            NOOP: begin
+                execute_result <= 0;
+                execute_carry <= 1'b0; //set carry to 0
+                branch_address <= 0;
+                branch_valid <= 0;
+                end 
+            default: begin
+                        execute_result <= 0;
+                        execute_carry <= 1'b0;
+                        branch_address <= 0;
+                        branch_valid <= 0;
+                     end // set result to 0 and set carry to 0
+            
+        endcase
+        
     end
+
     
     //Mem - Access memory if needed (LOAD - get operand from memory, STORE - Store operand to memory)
     always @(posedge clk) begin : MEM
