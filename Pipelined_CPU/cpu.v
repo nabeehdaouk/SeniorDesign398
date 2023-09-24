@@ -28,6 +28,9 @@ module cpu(
     reg [31:0] file_reg_A [31:0];
     reg [31:0] file_reg_B [63:0];
     
+    reg [31:0] opperand1;
+    reg [31:0] opperand2;
+    
     wire [10:0] branch_address; //Defines branch address, only taken if valid
     wire branch_valid;          //Defines if the branch was valid or not
     wire program_status;        //Defines the program status used for branches    
@@ -52,10 +55,42 @@ module cpu(
         decode <= instruction_fetch;
     end
     
-    //Decode - Decode instruction, get any operands from file regs
-    always @(posedge clk) begin : DECODE
+    
+        //Decode - Decode instruction, get any operands from file regs
+    always @(posedge clk) begin : DECODE  //FIX ASSIGNMETS TO RIGHT LOCATIONS
+        case (decode[23])//Source type bit
+            1'b0: //reg
+            begin
+                opperand1<=(decode[10])? file_reg_B[decode[9:5]] : file_reg_A[decode[4:0]];  //load opp1 w regB or A depending on decode[21]
+               
+            end
+            1'b1: //immidiate
+            begin
+                opperand1<= {{21{1'b0}}, decode[10:0]};  //upper 21 bits 0 for ld immideate value
+            end
+            default:
+            begin
+                opperand1<= {32{1'b0}};
+            end
+        endcase
         
-    end 
+          case (decode[22])//Destination type bit
+            1'b0: //reg
+            begin
+                opperand2<= opperand1<=(decode[21])? file_reg_B[decode[20:16]] : file_reg_A[decode[15:11]];
+            end
+            1'b1: //mem
+            begin
+                opperand2<= {32{1'b0}};  
+            end
+            default:
+            begin
+                opperand2<= {32{1'b0}};
+            end
+        endcase
+    
+        //BRANCH INSTRUCTION???
+    end  
     
     //Execute - Take decode info and execute (or grab additional info from memory)
     always @(posedge clk) begin : EXECUTE
