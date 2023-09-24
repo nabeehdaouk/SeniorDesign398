@@ -34,10 +34,11 @@ module cpu(
     reg [31:0] operand1;
     reg [31:0] operand2;
     reg [31:0] execute_result;
+    reg [31:0] mem_result;
     
     wire [10:0] branch_address; //Defines branch address, only taken if valid
     wire branch_valid;          //Defines if the branch was valid or not
-    wire program_status;        //Defines the program status used for branches  
+    wire [4:0] program_status;  //Defines the program status used for branches  
       
     
     psr program_status_register(
@@ -61,42 +62,28 @@ module cpu(
     end
     
     //Decode - Decode instruction, get any operands from file regs
-    always @(posedge clk) begin : DECODE  
-        case (decode[23])//Source type bit
-            1'b0: //reg
-            begin
-                operand1 <= (decode[10]) ? file_reg_B[decode[9:5]] : file_reg_A[decode[4:0]];  //load opp1 w regB or A depending on decode[21] 
-            end
-            1'b1: //immidiate
-            begin
-                operand1 <= {{21{1'b0}}, decode[10:0]};  //upper 21 bits 0 for ld immideate value
-            end
-            default:
-            begin
-                operand1 <= {32{1'b0}};
-            end
-        endcase
+    always @(posedge clk) begin : DECODE
         
-          case (decode[22])//Destination type bit
-            1'b0: //reg
-            begin
-                operand2 <= (decode[21]) ? file_reg_B[decode[20:16]] : file_reg_A[decode[15:11]];
-            end
-            1'b1: //mem
-            begin
-                operand2<= {32{1'b0}};  
-            end
-            default:
-            begin
-                operand2<= {32{1'b0}};
-            end
-        endcase
+        //Decode source
+        if(decode[23]) begin
+            operand1 <= {{21{1'b0}}, decode[10:0]};  //upper 21 bits 0 for ld immideate value
+        end else begin
+            operand1 <= (decode[10]) ? file_reg_B[decode[9:5]] : file_reg_A[decode[4:0]];  //load opp1 w regB or A depending on decode[21] 
+        end
+        
+        //Decode destination
+        if(decode[22]) begin
+            operand2 <= {32{1'b0}};  
+        end else begin
+            operand2 <= (decode[21]) ? file_reg_B[decode[20:16]] : file_reg_A[decode[15:11]];
+        end
 
     end
     
     //Execute - Take decode info and execute (or grab additional info from memory)
     always @(posedge clk) begin : EXECUTE
         mem <= execute;
+        mem_result <= execute_result;
     end
     
     //Mem - Access memory if needed (LOAD - get operand from memory, STORE - Store operand to memory)
@@ -123,7 +110,15 @@ module cpu(
     
     //Write 
     always @(posedge clk) begin : WB
-        
+        if(mem[31:29] == LOAD) begin
+            if(write_back[10]) begin
+                file_reg_A[write_back[9:5]] <= mem_store_data;  
+            end
+            else begin
+                file_reg_A[write_back[4:0]] <= mem_store_data;  
+            end
+        end
+        result <= mem_result;
     end
 
     assign mem_radrs_ir = pc_cnt;
