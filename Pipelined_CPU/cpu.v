@@ -3,14 +3,14 @@ module cpu(
     input resetn,                       //Global reset signal
     input [31:0] instruction_fetch,     //Instruction fetched from memory
     input [31:0] mem_store_data,        //Data read from memory that will be stored
-    output read_mem_ir,                 //Read enable for reading instructions
     output reg read_mem_str,            //Read enable for reading for a store
     output reg write_mem,               //Write enable to memory
     output reg carry,                   //Carry from addition or subtraction
     output reg [31:0] result,           //Result (either sent to mem, or just as an output)
     output reg [31:0] mem_wdata,        //Used for STORE instruction, information to be stored in memory
     output reg [10:0] mem_wadrs,        //Write address to memory
-    output reg [10:0] mem_radrs_LD,     //Read address to read from memoroy used for load instructions
+    output reg [10:0] mem_radrs_ld,     //Read address to read from memoroy used for load instructions
+    output read_mem_ir,                 //Read enable for reading instructions
     output [10:0] mem_radrs_ir          //Read address to read from memory used for fetching instructions
 );
 
@@ -27,7 +27,7 @@ module cpu(
     reg [31:0] execute;
     reg [31:0] mem;
     reg [31:0] write_back;
-    reg [10:0] pc_cnt;                  //Stores program count
+    wire [10:0] pc_cnt;                  //Stores program count
     
     reg [31:0] file_reg_A [31:0];
     reg [31:0] file_reg_B [31:0];
@@ -35,11 +35,14 @@ module cpu(
     reg [31:0] operand2;
     reg [31:0] execute_result;
     reg [31:0] mem_result;
+    reg [31:0] wb_result;
     reg execute_carry;
     
     reg [10:0] branch_address;  //Defines branch address, only taken if valid
     reg branch_valid;           //Defines if the branch was valid or not
     wire [4:0] program_status;  //Defines the program status used for branches  
+    
+    integer i;                  //For reset of file regs
       
     
     psr program_status_register(
@@ -59,17 +62,25 @@ module cpu(
 
     //Fetch - Load fetched command to be decoded
     always @(posedge clk) begin : FETCH
-        if(!branch_valid) begin
+        if(!resetn) begin
+           decode <=  0;
+        end
+        else if(!branch_valid) begin
             decode <= instruction_fetch;
         end
         else begin
-            decode <= {32{1'b0}}; 
+            decode <= 0; 
         end
     end
     
     //Decode - Decode instruction, get any operands from file regs
     always @(posedge clk) begin : DECODE
-        if(!branch_valid) begin
+        if(!resetn) begin
+           execute <= 0; 
+           operand1 <= 0;
+           operand2 <= 0;
+        end
+        else if(!branch_valid) begin
             execute <= decode;
             
             //Decode source
@@ -87,15 +98,24 @@ module cpu(
             end
         end
         else begin
-           operand1 <= {32{1'b0}};  
-           operand2 <= {32{1'b0}};  
+            execute <= 0;
+            operand1 <= 0;  
+            operand2 <= 0;  
         end       
     end
     
    
     //Execute - Take decode info and execute (or grab additional info from memory)
     always @(posedge clk) begin : EXECUTE
-        if(!branch_valid) begin
+        if(!resetn) begin
+            mem <= 0;
+            mem_result <= 0;
+            branch_address <= 0;
+            branch_valid <= 0;
+            execute_result <= 0;
+            execute_carry <= 0;
+        end
+        else if(!branch_valid) begin
         
             mem <= execute;
             mem_result <= execute_result;
@@ -155,6 +175,7 @@ module cpu(
                             branch_valid <= 0;
                         end
                     endcase
+                    read_mem_str <= 0;
                 end
                         
                 ADD: {carry,execute_result} <= operand1 + operand2; 
@@ -164,6 +185,7 @@ module cpu(
                     execute_carry <= 1'b0;
                     branch_address <= 0;
                     branch_valid <= 0;
+                    read_mem_str <= 0;
                 end
                 
                 AND: begin
@@ -171,6 +193,7 @@ module cpu(
                     execute_carry <= 1'b0;
                     branch_address <= 0;
                     branch_valid <= 0;
+                    read_mem_str <= 0;
                 end 
                 
                 OR: begin
@@ -178,6 +201,7 @@ module cpu(
                     execute_carry <= 1'b0;
                     branch_address <= 0;
                     branch_valid <= 0;
+                    read_mem_str <= 0;
                 end
                 
                 NOOP: begin
@@ -185,13 +209,24 @@ module cpu(
                     execute_carry <= 1'b0; //set carry to 0
                     branch_address <= 0;
                     branch_valid <= 0;
+                    read_mem_str <= 0;
                 end 
                 
+                LOAD : begin
+                    read_mem_str <= 1;
+                    mem_radrs_ld <= execute[10:0];
+                    execute_result <= 0;
+                    execute_carry <= 1'b0; //set carry to 0
+                    branch_address <= 0;
+                    branch_valid <= 0;
+                end
+                                
                 default: begin
                     execute_result <= 0;
                     execute_carry <= 1'b0;
                     branch_address <= 0;
                     branch_valid <= 0;
+                    read_mem_str <= 0;
                 end // set result to 0 and set carry to 0
                 
             endcase
@@ -200,45 +235,76 @@ module cpu(
             execute_result <= 0;
             execute_carry <= 1'b0;
             branch_address <= 0;
-            branch_valid <= 0;    
+            branch_valid <= 0;  
+            read_mem_str <= 0;  
         end
         
     end
 
     
     //Mem - Access memory if needed (LOAD - get operand from memory, STORE - Store operand to memory)
+    //TODO : Load instruction should allow immediate value as source
     always @(posedge clk) begin : MEM
-        write_back <= mem;
-        
-        if(mem[31:29] == LOAD) begin //LOAD from memory to reg, get memory operand as read from memory
-            read_mem_str <= 1;
-            mem_radrs_LD <= mem[10:0];
+        if(!resetn) begin
+            write_back <= 0;
+            wb_result <= 0;
             write_mem <= 0;
+            mem_wadrs <= 0;
+            mem_wdata <= 0;
         end
-        else if(mem[31:29] == STORE) begin //Store into memory, set write, w_adrs, and wdata
-            write_mem <= 1;
-            mem_wadrs <= mem[21:11];
-            mem_wdata <= mem_result;
-            read_mem_str <= 0;
-        end 
         else begin
-            write_mem <= 0; 
-            read_mem_str <= 0;
+            write_back <= mem;
+            if(mem[31:29] == STORE) begin //Store into memory, set write, w_adrs, and wdata
+                write_mem <= 1;
+                mem_wadrs <= mem[21:11];
+                if(mem[10]) begin
+                    mem_wdata <= file_reg_A[mem[9:5]];
+                    wb_result <= file_reg_A[mem[9:5]];
+                end 
+                else begin
+                    mem_wdata <= file_reg_A[mem[4:0]];
+                    wb_result <= file_reg_A[mem[4:0]];
+                end
+            end 
+            else begin
+                wb_result <= mem_result;
+                write_mem <= 0; 
+            end
         end
            
     end
     
-    //Write 
+    //Write - Write the result to a register
+    //TODO : All Storage should happen here, for all opcodes not just LOAD
     always @(posedge clk) begin : WB
-        if(write_back[31:29] == LOAD) begin
+        if(!resetn) begin
+            result <= 0; 
+            for(i = 0; i < 32; i = i + 1) begin
+                file_reg_A[i] <= 0;
+                file_reg_B[i] <= 0;  
+            end
+        end
+        else if(write_back[31:29] == LOAD) begin
             if(write_back[10]) begin
                 file_reg_A[write_back[9:5]] <= mem_store_data;  
             end
             else begin
                 file_reg_A[write_back[4:0]] <= mem_store_data;  
             end
+            result <= mem_store_data;
         end
-        result <= mem_result;
+        else if(write_back[31:29] != STORE) begin
+             if(write_back[10]) begin
+                file_reg_A[write_back[20:16]] <= wb_result;  
+            end
+            else begin
+                file_reg_A[write_back[15:11]] <= wb_result;  
+            end
+            result <= wb_result;   
+        end
+        else begin
+            result <= wb_result;
+        end
     end
 
     assign mem_radrs_ir = pc_cnt;
