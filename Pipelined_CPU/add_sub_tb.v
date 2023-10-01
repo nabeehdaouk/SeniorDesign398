@@ -1,4 +1,4 @@
-module load_store_tb();
+module add_sub_tb();
     
     reg clk;
     reg resetn;        //Global reset
@@ -42,11 +42,6 @@ module load_store_tb();
         #10
         w_adrs = 4;
         w_instruction = 32'b110_00_000_0_1_1_11111_11111_0_00000_00011; //STORE REG_A_3 MEM2047
-        
-        //Branch instruction
-        #10
-        w_adrs = 5;
-        w_instruction = 32'b101_00_100_0_0_0_00000_00000_0_00000_00000; //BRANCH EQZ MEM0
 
         //Add instruction
         #10
@@ -55,16 +50,15 @@ module load_store_tb();
         
         //Add instruction
         #10
-        w_adrs = 10;
-        w_instruction = 32'b100_00_000_1_1_0_00000_00011_0_00000_00001; //Add 3 + 1 
-        
+        w_adrs = 6;
+        w_instruction = 32'b100_00_000_1_0_0_00000_00011_0_00000_00001; //Add 1 REG_A_3 
         
         //Start
         #10
         cpu_en = 1;
         w_enable = 0;
 
-        
+        #175
         $stop();    
     
     end
