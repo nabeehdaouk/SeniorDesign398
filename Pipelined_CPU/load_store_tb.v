@@ -54,12 +54,18 @@ module load_store_tb();
         w_adrs = 7;
         w_instruction = 32'h1234_5678;
         
+        //Add instruction
+        #10
+        w_adrs = 10;
+        w_instruction = 32'b100_00_000_1_1_0_00000_00011_0_00000_00001; //Add 3 + 1 
+        
+        
         //Start
         #10
         cpu_en = 1;
         w_enable = 0;
 
-        #175
+        
         $stop();    
     
     end

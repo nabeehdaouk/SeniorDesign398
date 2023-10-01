@@ -5,3 +5,4 @@ Pipelined_CPU/.library_mapping.xml
 *.svg
 Pipelined_CPU/tcl_stacktrace.txt
 Pipelined_CPU/transcript
+Pipelined_CPU/vsim.wlf
