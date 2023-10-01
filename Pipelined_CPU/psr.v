@@ -1,3 +1,5 @@
+//TODO : Add reset signal
+
 module psr(
     input [31:0] res,               //Result coming from Processor
     input carry,                    //Carry bit from Processor

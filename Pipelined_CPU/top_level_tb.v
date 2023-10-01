@@ -42,7 +42,7 @@ module top_level_tb();
         //Add instruction
         #10
         w_adrs = 4;
-        w_instruction = 32'b110_00_000_0_1_1_10000_00000_0_00000_00011; //STORE REG_A_3 MEM'h600
+        w_instruction = 32'b110_00_000_0_1_1_11111_11111_0_00000_00011; //STORE REG_A_3 MEM2047
         
         //Add instruction
         #10

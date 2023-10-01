@@ -254,7 +254,7 @@ module cpu(
         end
         else begin
             write_back <= mem;
-            if(mem[31:29] == STORE) begin //Store into memory, set write, w_adrs, and wdata
+            if(mem[31:29] == STORE) begin //Store into reg, set write, w_adrs, and wdata
                 write_mem <= 1;
                 mem_wadrs <= mem[21:11];
                 if(mem[10]) begin
@@ -286,10 +286,10 @@ module cpu(
         end
         else if(write_back[31:29] == LOAD) begin
             if(write_back[10]) begin
-                file_reg_A[write_back[9:5]] <= mem_store_data;  
+                file_reg_A[write_back[20:16]] <= mem_store_data;  
             end
             else begin
-                file_reg_A[write_back[4:0]] <= mem_store_data;  
+                file_reg_A[write_back[15:11]] <= mem_store_data;  
             end
             result <= mem_store_data;
         end
