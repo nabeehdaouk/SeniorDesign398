@@ -1,4 +1,4 @@
-module top_level_tb();
+module load_store_tb();
     
     reg clk;
     reg resetn;        //Global reset
@@ -44,6 +44,11 @@ module top_level_tb();
         w_adrs = 4;
         w_instruction = 32'b110_00_000_0_1_1_11111_11111_0_00000_00011; //STORE REG_A_3 MEM2047
         
+        //Branch instruction
+        #10
+        w_adrs = 5;
+        w_instruction = 32'b101_00_100_0_0_0_00000_00000_0_00000_00000; //BRANCH EQZ MEM0
+
         //Add instruction
         #10
         w_adrs = 7;
@@ -54,7 +59,7 @@ module top_level_tb();
         cpu_en = 1;
         w_enable = 0;
 
-        #105
+        #175
         $stop();    
     
     end

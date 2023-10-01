@@ -37,6 +37,7 @@ module cpu(
     reg [31:0] mem_result;
     reg [31:0] wb_result;
     reg execute_carry;
+    reg mem_carry;
     
     reg [10:0] branch_address;  //Defines branch address, only taken if valid
     reg branch_valid;           //Defines if the branch was valid or not
@@ -248,6 +249,7 @@ module cpu(
         if(!resetn) begin
             write_back <= 0;
             wb_result <= 0;
+            mem_carry <= 0;
             write_mem <= 0;
             mem_wadrs <= 0;
             mem_wdata <= 0;
@@ -268,6 +270,7 @@ module cpu(
             end 
             else begin
                 wb_result <= mem_result;
+                mem_carry <= execute_carry;
                 write_mem <= 0; 
             end
         end
@@ -279,6 +282,7 @@ module cpu(
     always @(posedge clk) begin : WB
         if(!resetn) begin
             result <= 0; 
+            carry <= 0;
             for(i = 0; i < 32; i = i + 1) begin
                 file_reg_A[i] <= 0;
                 file_reg_B[i] <= 0;  
@@ -292,6 +296,7 @@ module cpu(
                 file_reg_A[write_back[15:11]] <= mem_store_data;  
             end
             result <= mem_store_data;
+            carry <= mem_carry;
         end
         else if(write_back[31:29] != STORE) begin
              if(write_back[10]) begin
@@ -300,10 +305,12 @@ module cpu(
             else begin
                 file_reg_A[write_back[15:11]] <= wb_result;  
             end
-            result <= wb_result;   
+            result <= wb_result; 
+            carry <= mem_carry;  
         end
         else begin
             result <= wb_result;
+            carry <= mem_carry;
         end
     end
 
