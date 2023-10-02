@@ -34,7 +34,6 @@ module cpu(
     reg [31:0] operand1;
     reg [31:0] operand2;
     reg [31:0] execute_result;
-    reg [31:0] mem_result;
     reg [31:0] wb_result;
     reg execute_carry;
     reg mem_carry;
@@ -110,7 +109,6 @@ module cpu(
     always @(posedge clk) begin : EXECUTE
         if(!resetn) begin
             mem <= 0;
-            mem_result <= 0;
             branch_address <= 0;
             branch_valid <= 0;
             execute_result <= 0;
@@ -119,7 +117,6 @@ module cpu(
         else if(!branch_valid) begin
         
             mem <= execute;
-            mem_result <= execute_result;
             
             case(execute[31:29])
                 
@@ -269,7 +266,7 @@ module cpu(
                 end
             end 
             else begin
-                wb_result <= mem_result;
+                wb_result <= execute_result;
                 mem_carry <= execute_carry;
                 write_mem <= 0; 
             end
