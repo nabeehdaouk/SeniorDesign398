@@ -286,7 +286,7 @@ module cpu(
             end
         end
         else if(write_back[31:29] == LOAD) begin
-            if(write_back[10]) begin
+            if(write_back[21]) begin
                 file_reg_A[write_back[20:16]] <= mem_store_data;  
             end
             else begin
@@ -296,7 +296,7 @@ module cpu(
             carry <= mem_carry;
         end
         else if(write_back[31:29] != STORE) begin
-             if(write_back[10]) begin
+             if(write_back[21]) begin
                 file_reg_A[write_back[20:16]] <= wb_result;  
             end
             else begin
