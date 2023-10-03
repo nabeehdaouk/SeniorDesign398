@@ -46,8 +46,8 @@ module top_level_and_or_tb();
         cpu_en = 0;
         resetn = 1;
         w_enable = 1;
-          w_instruction = 32'b111_00_000_0_0_0_00101_00101_0_00000_10001; //LOAD MEM16 REG_A_7
-        //w_instruction = 32'b111_00_000_0_0_0_00000_00101_0_00000_10001; //LOAD MEM16 REG_A_7
+          w_instruction = 32'b111_00_000_0_0_1_00101_00101_0_00000_10001; //LOAD MEM16 REG_B_5
+    
         
         //Add instrction
         #10
@@ -55,8 +55,12 @@ module top_level_and_or_tb();
         cpu_en = 0;
         resetn = 1;
         w_enable = 1;
-        //w_instruction = 32'b010_00_000_0_0_0_00000_00011_0_00000_00101; //AND REGA_3 REGA_7
-        w_instruction = 32'b001_00_000_0_0_0_00000_00011_0_00000_00101; //OR REGA_3 REGB_7
+        
+        
+        //Select AND or OR
+        
+          //w_instruction = 32'b010_00_000_0_0_0_00000_00011_1_00101_00101; //AND REGA_3 REGA_7
+        w_instruction = 32'b001_00_000_0_0_0_00000_00011_1_00101_00101; //OR REGA_3 REGB_7
         
         
         

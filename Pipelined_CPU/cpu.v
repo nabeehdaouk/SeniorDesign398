@@ -257,8 +257,8 @@ module cpu(
                 write_mem <= 1;
                 mem_wadrs <= mem[21:11];
                 if(mem[10]) begin
-                    mem_wdata <= file_reg_A[mem[9:5]];
-                    wb_result <= file_reg_A[mem[9:5]];
+                    mem_wdata <= file_reg_B[mem[9:5]];
+                    wb_result <= file_reg_B[mem[9:5]];
                 end 
                 else begin
                     mem_wdata <= file_reg_A[mem[4:0]];
@@ -287,7 +287,7 @@ module cpu(
         end
         else if(write_back[31:29] == LOAD) begin
             if(write_back[21]) begin
-                file_reg_A[write_back[20:16]] <= mem_store_data;  
+                file_reg_B[write_back[20:16]] <= mem_store_data;  
             end
             else begin
                 file_reg_A[write_back[15:11]] <= mem_store_data;  
@@ -297,7 +297,7 @@ module cpu(
         end
         else if(write_back[31:29] != STORE) begin
              if(write_back[21]) begin
-                file_reg_A[write_back[20:16]] <= wb_result;  
+                file_reg_B[write_back[20:16]] <= wb_result;  
             end
             else begin
                 file_reg_A[write_back[15:11]] <= wb_result;  
