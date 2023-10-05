@@ -179,7 +179,7 @@ module cpu(
                 ADD: {carry,execute_result} <= operand1 + operand2; 
                 
                 SUBTRACT: begin
-                    execute_result <= operand1 - operand2;
+                    execute_result <= operand2 - operand1;
                     execute_carry <= 1'b0;
                     branch_address <= 0;
                     branch_valid <= 0;
