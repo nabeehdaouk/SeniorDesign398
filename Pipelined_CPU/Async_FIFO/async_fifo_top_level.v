@@ -11,18 +11,23 @@ module async_fifo_top_level #(parameter DATA_WIDTH = 31, MEM_DEPTH=8, PTR_SIZE=8
 	
 );
 	wire [PTR_SIZE - 1: 0] r_ptr;
+	wire [PTR_SIZE - 1: 0] gray_rptr;
+	wire [PTR_SIZE - 1: 0] gray_rptr_sync;
+	wire [PTR_SIZE - 1: 0] rptr_sync;
 	wire [PTR_SIZE - 1: 0] w_ptr;
-	wire [PTR_SIZE - 1: 0] gray_ptr;
-	wire [PTR_SIZE - 1: 0] bin_ptr;
+	wire [PTR_SIZE - 1: 0] gray_wptr;
+	wire [PTR_SIZE - 1: 0] gray_wptr_sync;
+	wire [PTR_SIZE - 1: 0] wptr_sync;
+	
 	
 	binary_to_gray binary_to_gray_instance(
-        .bin(w_ptr),
-        .gray(gray)
+        .bin(r_ptr),
+        .gray(gray_rptr)
     );
     
 	gray_to_binary gray_to_binary_instance(
-	    .gray(gray_ptr),
-	    .bin(bin)
+	    .bin(w_ptr),
+	    .gray(gray_wptr)
 	);
 	
 	ram #(
