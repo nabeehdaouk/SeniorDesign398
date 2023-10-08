@@ -1,4 +1,4 @@
-module ram #(parameter mem_width=32, mem_depth = 8)(
+module ram #(parameter MEM_WIDTH=32, MEM_DEPTH = 8)(
     input w_clk,                            //Write clock
     input r_clk,                            //Read clock
     input resetn,                           //Negative reset signal
@@ -6,13 +6,13 @@ module ram #(parameter mem_width=32, mem_depth = 8)(
     input r_en,                             //Read enable
     input full,                             //Full condition
     input empty,                            //Empty condition
-    input [mem_depth - 1:0] w_adrs,         //Write address
-    input [mem_depth - 1:0] r_adrs,         //Read address
-    input [mem_width:0] w_data,             //Write data
-    output reg [mem_width -1:0] r_data      //Read data
+    input [MEM_DEPTH - 1:0] w_adrs,         //Write address
+    input [MEM_DEPTH - 1:0] r_adrs,         //Read address
+    input [MEM_WIDTH:0] w_data,             //Write data
+    output reg [MEM_WIDTH -1:0] r_data      //Read data
 );
 
-    reg [mem_width - 1:0] mem [mem_depth - 1:0];        //Memory
+    reg [MEM_WIDTH - 1:0] mem [MEM_DEPTH - 1:0];        //Memory
     
     always @(posedge w_clk) begin: WRITE_TO_MEM
         if(!full && w_en && resetn) begin
