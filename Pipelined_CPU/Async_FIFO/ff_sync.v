@@ -1,10 +1,10 @@
-module ff_sync(                        //Double flip flop synchronizer
+module ff_sync #(parameter DATA_WIDTH =32)(                        //Double flip flop synchronizer
 	input clk,                         //Global clock signal
 	input resetn,                      //Global reset signal
-	input [31:0] data_in,              //Data in
-	output reg [31:0] data_out         //Data out
+	input [DATA_WIDTH:0] data_in,              //Data in
+	output reg [DATA_WIDTH:0] data_out         //Data out
 );
-	reg [31:0] q1;                     //Output of first flipflop holding data_in
+	reg [DATA_WIDTH:0] q1;                     //Output of first flipflop holding data_in
 	
 	always @(posedge clk) begin
 	    if (!resetn) begin             //If reset set both flip flop outputs to 0
