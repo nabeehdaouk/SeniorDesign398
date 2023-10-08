@@ -30,14 +30,19 @@ module load_store_tb();
         cpu_en = 1;
         w_instruction = 32'h0000_0000;
         w_enable = 0;
-        w_adrs = 1;
         
         //Add instrction
         #10
+        w_adrs = 1;
         cpu_en = 0;
         resetn = 1;
         w_enable = 1;
         w_instruction = 32'b111_00_000_0_0_0_00000_00011_0_00000_00111; //LOAD MEM7 REG_A_3
+        
+        //Add instruction
+        #10
+        w_adrs = 2;
+        w_instruction = 32'b111_00_000_0_0_1_00011_00000_0_00000_00111; //LOAD MEM7 REG_B_3
         
         //Add instruction
         #10
