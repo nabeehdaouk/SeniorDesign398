@@ -1,11 +1,11 @@
-module async_fifo_top_level #(data_width = 31, mem_depth=8)(
+module async_fifo_top_level #(DATA_WIDTH = 31, MEM_DEPTH=8)(
 	input w_clk,
 	input r_clk,
 	input resetn,
-	input [data_width-1:0] w_data,
-	input [mem_depth-1:0] r_adrs,
-	input [mem_depth-1:0] w_adrs,
-	output [data_width:0] r_data
+	input [DATA_WIDTH-1:0] w_data,
+	input [MEM_DEPTH-1:0] r_adrs,
+	input [MEM_DEPTH-1:0] w_adrs,
+	output [DATA_WIDTH:0] r_data
 	
 );
 	
