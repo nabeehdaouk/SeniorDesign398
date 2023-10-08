@@ -4,12 +4,12 @@ module g_b_tb();
     wire [31:0] out;
     wire [31:0] intramediate;
 
-    binary_to_gray binary_to_gray_instance(
+    binary_to_gray #(32)binary_to_gray_instance(
         .bin(in),
         .gray(intramediate)
     );
     
-	gray_to_binary gray_to_binary_instance(
+	gray_to_binary #(32)gray_to_binary_instance(
 	    .gray(intramediate),
 	    .bin(out)
 	);
