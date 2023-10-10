@@ -5,11 +5,11 @@ module binary_to_gray#(parameter WIDTH=32)(
 
 	assign gray[WIDTH-1] = bin[WIDTH-1]; // MSB of gray is same as MSB of binary
 
-generate // Generate logic for subsequent 30 bits
-    genvar i;
-    for (i = 0; i < (WIDTH-1); i = i + 1) begin : gray_gen
-        assign gray[WIDTH-2-i] = bin[WIDTH-1-i] ^ bin[WIDTH-2-i];
-    end
-endgenerate
-	
+    generate // Generate logic for subsequent 30 bits
+        genvar i;
+        for (i = 0; i < (WIDTH-1); i = i + 1) begin : gray_gen
+            assign gray[WIDTH-2-i] = bin[WIDTH-1-i] ^ bin[WIDTH-2-i];
+        end
+    endgenerate
+    	
 endmodule 

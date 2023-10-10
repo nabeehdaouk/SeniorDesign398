@@ -1,30 +1,44 @@
-module ram #(parameter MEM_WIDTH=32, MEM_DEPTH = 8, ADDRESS_SIZE = 4)(
-    input w_clk,                            //Write clock
-    input r_clk,                            //Read clock
-    input resetn,                           //Negative reset signal
-    input w_en,                             //Write enable
-    input r_en,                             //Read enable
-    input full,                             //Full condition
-    input empty,                            //Empty condition
-    input [ADDRESS_SIZE - 1:0] w_adrs,         //Write address
-    input [ADDRESS_SIZE- 1:0] r_adrs,         //Read address
-    input [MEM_WIDTH - 1:0] w_data,             //Write data
-    output reg [MEM_WIDTH -1:0] r_data      //Read data
-);
+module ram #(DATA_SIZE = 32, MEM_SIZE = 32, ADDR_LEN = 6)(
+        input wclk, rclk,
+        input w_en, r_en,
+        input resetn,
+        input [DATA_SIZE-1:0] w_data,
+        input [ADDR_LEN-2:0] w_addr, r_addr,
+        output reg r_valid, w_valid,
+        output reg [DATA_SIZE-1:0] r_data
+    );
+    
+    reg [DATA_SIZE-1:0] fifo_mem [MEM_SIZE-1:0];
+    integer i;
 
-    reg [MEM_WIDTH - 1:0] mem [MEM_DEPTH - 1:0];        //Memory
-    
-    always @(posedge w_clk) begin: WRITE_TO_MEM
-        if(!full && w_en && resetn) begin
-            mem[w_adrs] <= w_data;
+    always @(posedge wclk or negedge resetn) begin
+        if(!resetn) begin
+            for(i = 0; i < MEM_SIZE; i = i + 1) begin
+                fifo_mem[i] <= 0;
+                w_valid <= 0;
+            end
         end
-        
+        else if(w_en) begin
+            fifo_mem[w_addr] <= w_data;
+            w_valid <= 1;
+        end
+        else begin
+          w_valid <= 0;
+        end
     end
     
-    always @(posedge r_clk) begin: READ_TO_MEM
-        if(!full && r_en && resetn) begin
-            r_data <= mem[r_adrs];
+    always @(posedge rclk or negedge resetn) begin
+        if(!resetn) begin
+            r_data <= 0;
+            r_valid <= 0;
         end
-        
-    end
-endmodule 
+        else if(r_en) begin
+            r_data <= fifo_mem[r_addr];
+            r_valid <= 1;
+        end
+        else begin
+          r_valid <= 0;
+        end
+    end 
+    
+endmodule
