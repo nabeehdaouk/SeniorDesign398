@@ -12,15 +12,15 @@ module async_fifo_top_level #(parameter DATA_WIDTH = 31, MEM_DEPTH=8, PTR_SIZE=8
 	output reg empty
 	
 );
-	wire [PTR_SIZE - 1: 0] rptr;
-	wire [PTR_SIZE - 1: 0] gray_rptr;
-	wire [PTR_SIZE - 1: 0] gray_rptr_sync;
-	wire [PTR_SIZE - 1: 0] rptr_sync;
-	wire [PTR_SIZE - 1: 0] wptr;
-	wire [PTR_SIZE - 1: 0] gray_wptr;
-	wire [PTR_SIZE - 1: 0] gray_wptr_sync;
-	wire [PTR_SIZE - 1: 0] wptr_sync;
-	wire [PTR_SIZE - 1: 0] check_next;
+	reg [PTR_SIZE - 1: 0] rptr;
+	reg [PTR_SIZE - 1: 0] gray_rptr;
+	reg [PTR_SIZE - 1: 0] gray_rptr_sync;
+	reg [PTR_SIZE - 1: 0] rptr_sync;
+	reg [PTR_SIZE - 1: 0] wptr;
+	reg [PTR_SIZE - 1: 0] gray_wptr;
+	reg [PTR_SIZE - 1: 0] gray_wptr_sync;
+	reg [PTR_SIZE - 1: 0] wptr_sync;
+	reg [PTR_SIZE - 1: 0] check_next;
 	
 	wire write;
 	wire read;
@@ -60,7 +60,7 @@ module async_fifo_top_level #(parameter DATA_WIDTH = 31, MEM_DEPTH=8, PTR_SIZE=8
         .data_out(gray_wptr_sync)
     );
     
-	ram #(.MEM_WIDTH(DATA_WIDTH),.MEM_DEPTH(MEM_DEPTH)) ram_instance(
+	ram #(.MEM_WIDTH(DATA_WIDTH),.MEM_DEPTH(MEM_DEPTH),.ADDRESS_SIZE(PTR_SIZE - 1)) ram_instance(
 	    .w_clk(w_clk),
 	    .r_clk(r_clk),
 	    .resetn(resetn),
@@ -68,10 +68,76 @@ module async_fifo_top_level #(parameter DATA_WIDTH = 31, MEM_DEPTH=8, PTR_SIZE=8
 	    .r_en(r_en),
 	    .full(full),
 	    .empty(empty),
-	    .w_adrs(w_adrs),
-	    .r_adrs(r_adrs),
+	    .w_adrs(wptr[PTR_SIZE - 2:0]),
+	    .r_adrs(rptr[PTR_SIZE - 2:0]),
 	    .w_data(w_data),
 	    .r_data(r_data)
 	);
+	
+	always @(posedge w_clk) begin
+	   if(!resetn) begin
+	       wptr <= 0;
+	       full <= 0;
+	   end
+	   else if(resetn && ~full && w_en) begin
+	           if(wptr[PTR_SIZE - 2 :0] == MEM_DEPTH - 1) begin
+	               wptr[PTR_SIZE - 2:0] <= 0;
+	               wptr[PTR_SIZE - 1] <= ~wptr[PTR_SIZE - 1];
+	           end
+	           else begin
+	                   wptr <= wptr + 1;
+	                   if(wptr[PTR_SIZE - 1] != rptr_sync[PTR_SIZE - 1] && wptr[PTR_SIZE - 2:0] == rptr_sync[PTR_SIZE - 2:0]) begin
+	                       full <= 1;
+	                   end
+	                   else if(wptr - 31 == rptr_sync) begin
+	                           full <= 1;
+	                       end
+	                       else begin
+	                               full <= 0;
+	                           end
+	               end
+	       end 
+	       else begin
+	               full <= 0;
+	           end
+	           
+	end
+	
+	always @(posedge r_clk) begin
+	    if(!resetn) begin
+           rptr <= 0;
+           empty <= 0;
+       end
+       else if(resetn && ~empty && r_en) begin
+               if(rptr[PTR_SIZE - 2 :0] == MEM_DEPTH - 1) begin
+                   rptr[PTR_SIZE - 2:0] <= 0;
+                   rptr[PTR_SIZE - 1] <= ~rptr[PTR_SIZE - 1];
+               end
+               else begin
+                       rptr <= rptr + 1;
+                       if(rptr == wptr_sync) begin
+                           empty <= 1;
+                       end 
+                       else begin
+                                empty <= 0;
+                            end
+                   end
+           end
+           else begin
+                if (rptr == wptr_sync)begin
+                   empty <= 1;
+               end
+               else if (wptr_sync - rptr == 1) begin
+                    empty <= 1; 
+                end
+                else begin
+                        empty <= 0;
+                    end
+                
+        end            
+       
+       
+	end
+	
 	
 endmodule
