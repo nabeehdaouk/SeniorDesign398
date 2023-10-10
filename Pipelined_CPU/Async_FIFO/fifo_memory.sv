@@ -1,20 +1,19 @@
-module ram #(DATA_SIZE = 32, MEM_SIZE = 32, ADDR_LEN = 6)(
+module fifo_memory #(DATA_SIZE = 32, MEM_SIZE = 32, ADDR_LEN = 6)(
         input wclk, rclk,
         input w_en, r_en,
         input resetn,
         input [DATA_SIZE-1:0] w_data,
         input [ADDR_LEN-2:0] w_addr, r_addr,
-        output reg r_valid, w_valid,
-        output reg [DATA_SIZE-1:0] r_data
+        output logic r_valid, w_valid,
+        output logic [DATA_SIZE-1:0] r_data
     );
     
-    reg [DATA_SIZE-1:0] fifo_mem [MEM_SIZE-1:0];
-    integer i;
+    logic [DATA_SIZE-1:0] fifo_mem [MEM_SIZE-1:0];
 
-    always @(posedge wclk or negedge resetn) begin
+    always_ff @(posedge wclk or negedge resetn) begin
         if(!resetn) begin
-            for(i = 0; i < MEM_SIZE; i = i + 1) begin
-                fifo_mem[i] <= 0;
+            for(int i = 0; i < MEM_SIZE; i++) begin
+                fifo_mem[i] <= '0;
                 w_valid <= 0;
             end
         end
@@ -27,9 +26,9 @@ module ram #(DATA_SIZE = 32, MEM_SIZE = 32, ADDR_LEN = 6)(
         end
     end
     
-    always @(posedge rclk or negedge resetn) begin
+    always_ff @(posedge rclk or negedge resetn) begin
         if(!resetn) begin
-            r_data <= 0;
+            r_data <= '0;
             r_valid <= 0;
         end
         else if(r_en) begin
