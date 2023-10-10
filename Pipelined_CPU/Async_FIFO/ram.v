@@ -1,4 +1,4 @@
-module ram #(parameter MEM_WIDTH=32, MEM_DEPTH = 32, ADDRESS_SIZE = 8)(
+module ram #(parameter MEM_WIDTH=32, MEM_DEPTH = 8, ADDRESS_SIZE = 4)(
     input w_clk,                            //Write clock
     input r_clk,                            //Read clock
     input resetn,                           //Negative reset signal

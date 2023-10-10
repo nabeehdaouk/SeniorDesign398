@@ -1,4 +1,4 @@
-module async_fifo_top_level #(parameter DATA_WIDTH = 31, MEM_DEPTH=8, PTR_SIZE=8)(
+module async_fifo_top_level #(parameter DATA_WIDTH = 32, MEM_DEPTH=8, PTR_SIZE=4)(
 	input w_clk,
 	input r_clk,
 	input resetn,
@@ -20,10 +20,6 @@ module async_fifo_top_level #(parameter DATA_WIDTH = 31, MEM_DEPTH=8, PTR_SIZE=8
 	reg [PTR_SIZE - 1: 0] gray_wptr;
 	reg [PTR_SIZE - 1: 0] gray_wptr_sync;
 	reg [PTR_SIZE - 1: 0] wptr_sync;
-	reg [PTR_SIZE - 1: 0] check_next;
-	
-	wire write;
-	wire read;
 	
 	
 	binary_to_gray #(.WIDTH(PTR_SIZE)) binary_to_gray_rptr(
