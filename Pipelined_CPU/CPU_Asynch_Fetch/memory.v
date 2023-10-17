@@ -8,6 +8,8 @@ module memory(
     input w_en,                     //Write enable
     input r_en1,                    //Read enable 1
     input r_en2,                    //Read enable 2
+    output reg r_valid1,            //Read valid 1
+    output reg r_valid2,            //Read valid 2
     output reg [31:0] data_out1,    //Data out 1
     output reg [31:0] data_out2     //Data out 2
 );

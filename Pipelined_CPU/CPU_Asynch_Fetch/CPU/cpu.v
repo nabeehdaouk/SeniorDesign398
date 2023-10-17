@@ -3,7 +3,10 @@ module cpu(
     input resetn,                       //Global reset signal
     input [31:0] instruction_fetch,     //Instruction fetched from memory
     input [31:0] mem_store_data,        //Data read from memory that will be stored
+    input fetch_enabled,                //States if the fetch is enabled
+    output reg branch_valid,            //States branch was valid
     output reg read_mem_str,            //Read enable for reading for a store
+    output reg [10:0] branch_address,   //Defines branch address, only taken if valid
     output reg write_mem,               //Write enable to memory
     output reg carry,                   //Carry from addition or subtraction
     output reg [31:0] result,           //Result (either sent to mem, or just as an output)
@@ -37,9 +40,7 @@ module cpu(
     reg [31:0] wb_result;
     reg execute_carry;
     reg mem_carry;
-    
-    reg [10:0] branch_address;  //Defines branch address, only taken if valid
-    reg branch_valid;           //Defines if the branch was valid or not
+
     wire [4:0] program_status;  //Defines the program status used for branches  
     
     integer i;                  //For reset of file regs
@@ -50,14 +51,6 @@ module cpu(
         .carry(carry),
         .program_status(program_status)
     );
-
-    pc program_counter(
-        .clk(clk),
-        .resetn(resetn),
-        .branch_valid(branch_valid),
-        .branch_address(branch_address),
-        .cnt(pc_cnt)
-    ); 
 
 
     //Fetch - Load fetched command to be decoded
@@ -312,6 +305,6 @@ module cpu(
     end
 
     assign mem_radrs_ir = pc_cnt;
-    assign read_mem_ir = 1'b1;
+    assign read_mem_ir = fetch_enabled ? 1'b1 : 1'b0;
     
 endmodule
