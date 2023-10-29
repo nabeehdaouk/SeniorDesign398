@@ -2,10 +2,12 @@ module cpu(
     input clk,                          //Clock for CPU
     input resetn,                       //Global reset signal
     input [31:0] instruction_fetch,     //Instruction fetched from memory
-    input [31:0] mem_store_data,        //Data read from memory that will be stored
+    input [31:0] mem_load_data,         //Data read from memory that will be loaded
     input fetch_enabled,                //States if the fetch is enabled
+    input read_load_valid,              //State we read from memory sucessfully
+    input write_store_valid,            //States store instruction was valid 
     output reg branch_valid,            //States branch was valid
-    output reg read_mem_str,            //Read enable for reading for a store
+    output reg read_mem_load,           //Read enable for reading for a load
     output reg [10:0] branch_address,   //Defines branch address, only taken if valid
     output reg write_mem,               //Write enable to memory
     output reg carry,                   //Carry from addition or subtraction
@@ -40,6 +42,7 @@ module cpu(
     reg [31:0] wb_result;
     reg execute_carry;
     reg mem_carry;
+    reg stall_pipe;              //This is used when accessing memory to stall pipeline
 
     wire [4:0] program_status;  //Defines the program status used for branches  
     
@@ -58,10 +61,10 @@ module cpu(
         if(!resetn) begin
            decode <=  0;
         end
-        else if(!branch_valid) begin
+        else if(!branch_valid && !stall_pipe) begin
             decode <= instruction_fetch;
         end
-        else begin
+        else if(!stall_pipe) begin
             decode <= 0; 
         end
     end
@@ -73,7 +76,7 @@ module cpu(
            operand1 <= 0;
            operand2 <= 0;
         end
-        else if(!branch_valid) begin
+        else if(!branch_valid && !stall_pipe) begin
             execute <= decode;
             
             //Decode source
@@ -90,7 +93,7 @@ module cpu(
                 operand2 <= (decode[21]) ? file_reg_B[decode[20:16]] : file_reg_A[decode[15:11]];
             end
         end
-        else begin
+        else if(!stall_pipe) begin
             execute <= 0;
             operand1 <= 0;  
             operand2 <= 0;  
@@ -107,7 +110,7 @@ module cpu(
             execute_result <= 0;
             execute_carry <= 0;
         end
-        else if(!branch_valid) begin
+        else if(!branch_valid && !stall_pipe) begin
         
             mem <= execute;
             
@@ -166,68 +169,137 @@ module cpu(
                             branch_valid <= 0;
                         end
                     endcase
-                    read_mem_str <= 0;
+                    read_mem_load <= 0;
+                    stall_pipe <= 0;
+                    mem_wdata <= 0;
+                    write_mem <= 0;
+                    mem_wadrs <= 0;
                 end
                         
-                ADD: {carry,execute_result} <= operand1 + operand2; 
+                ADD: begin
+                    {execute_carry,execute_result} <= operand1 + operand2; 
+                    stall_pipe <= 0;
+                    mem_wdata <= 0;
+                    write_mem <= 0;
+                    mem_wadrs <= 0;
+                    branch_address <= 0;
+                    branch_valid <= 0;
+                    read_mem_load <= 0;
+                end
                 
                 SUBTRACT: begin
+                    mem_wdata <= 0;
+                    write_mem <= 0;
+                    mem_wadrs <= 0;
                     execute_result <= operand2 - operand1;
                     execute_carry <= 1'b0;
                     branch_address <= 0;
                     branch_valid <= 0;
-                    read_mem_str <= 0;
+                    read_mem_load <= 0;
+                    stall_pipe <= 0;
                 end
                 
                 AND: begin
+                    mem_wdata <= 0;
+                    write_mem <= 0;
+                    mem_wadrs <= 0;
                     execute_result <= operand1 & operand2;
                     execute_carry <= 1'b0;
                     branch_address <= 0;
                     branch_valid <= 0;
-                    read_mem_str <= 0;
+                    read_mem_load <= 0;
+                    stall_pipe <= 0;
                 end 
                 
                 OR: begin
+                    mem_wdata <= 0;
+                    write_mem <= 0;
+                    mem_wadrs <= 0;
                     execute_result <= operand1 | operand2;
                     execute_carry <= 1'b0;
                     branch_address <= 0;
                     branch_valid <= 0;
-                    read_mem_str <= 0;
+                    read_mem_load <= 0;
+                    stall_pipe <= 0;
                 end
                 
                 NOOP: begin
+                    mem_wdata <= 0;
+                    write_mem <= 0;
+                    mem_wadrs <= 0;
                     execute_result <= 0;
                     execute_carry <= 1'b0; //set carry to 0
                     branch_address <= 0;
                     branch_valid <= 0;
-                    read_mem_str <= 0;
+                    read_mem_load <= 0;
+                    stall_pipe <= 0;
                 end 
                 
                 LOAD : begin
-                    read_mem_str <= 1;
+                    mem_wdata <= 0;
+                    write_mem <= 0;
+                    mem_wadrs <= 0;
+                    read_mem_load <= 1;
                     mem_radrs_ld <= execute[10:0];
                     execute_result <= 0;
                     execute_carry <= 1'b0; //set carry to 0
                     branch_address <= 0;
                     branch_valid <= 0;
+                    stall_pipe <= 1;
                 end
+                
+                STORE : begin
+                    write_mem <= 1;
+                    mem_wadrs <= execute[21:11];
+                    if(execute[10]) begin
+                        mem_wdata <= file_reg_B[mem[9:5]];
+                    end 
+                    else begin
+                        mem_wdata <= file_reg_A[mem[4:0]];
+                    end
+                    execute_result <= 0;
+                    execute_carry <= 1'b0; //set carry to 0
+                    branch_address <= 0;
+                    branch_valid <= 0;
+                    stall_pipe <= 1; 
+                end
+                
                                 
                 default: begin
+                    mem_wdata <= 0;
+                    write_mem <= 0;
+                    mem_wadrs <= 0;
                     execute_result <= 0;
                     execute_carry <= 1'b0;
                     branch_address <= 0;
                     branch_valid <= 0;
-                    read_mem_str <= 0;
+                    read_mem_load <= 0;
+                    mem_radrs_ld <= 0;
+                    stall_pipe <= 0;
                 end // set result to 0 and set carry to 0
                 
             endcase
         end
-        else begin
+        else if(!stall_pipe) begin
             execute_result <= 0;
             execute_carry <= 1'b0;
             branch_address <= 0;
             branch_valid <= 0;  
-            read_mem_str <= 0;  
+            read_mem_load <= 0;
+            mem_radrs_ld <= 0;  
+            mem_wdata <= 0;
+            write_mem <= 0;
+            stall_pipe <= 0;
+        end
+        else if(stall_pipe) begin
+            if(read_load_valid || write_store_valid) begin
+                stall_pipe <= 0;
+            end
+            mem_wdata <= 0;
+            write_mem <= 0;
+            mem_wadrs <= 0; 
+            read_mem_load <= 0;
+            mem_radrs_ld <= 0;
         end
         
     end
@@ -240,31 +312,18 @@ module cpu(
             write_back <= 0;
             wb_result <= 0;
             mem_carry <= 0;
-            write_mem <= 0;
-            mem_wadrs <= 0;
-            mem_wdata <= 0;
         end
-        else begin
+        else if(!stall_pipe) begin
             write_back <= mem;
             if(mem[31:29] == STORE) begin //Store into reg, set write, w_adrs, and wdata
-                write_mem <= 1;
-                mem_wadrs <= mem[21:11];
-                if(mem[10]) begin
-                    mem_wdata <= file_reg_B[mem[9:5]];
-                    wb_result <= file_reg_B[mem[9:5]];
-                end 
-                else begin
-                    mem_wdata <= file_reg_A[mem[4:0]];
-                    wb_result <= file_reg_A[mem[4:0]];
-                end
+                wb_result <= file_reg_A[mem[4:0]];
+                mem_carry <= 0;
             end 
             else begin
                 wb_result <= execute_result;
                 mem_carry <= execute_carry;
-                write_mem <= 0; 
             end
         end
-           
     end
     
     //Write - Write the result to a register
@@ -280,12 +339,12 @@ module cpu(
         end
         else if(write_back[31:29] == LOAD) begin
             if(write_back[21]) begin
-                file_reg_B[write_back[20:16]] <= mem_store_data;  
+                file_reg_B[write_back[20:16]] <= mem_load_data;  
             end
             else begin
-                file_reg_A[write_back[15:11]] <= mem_store_data;  
+                file_reg_A[write_back[15:11]] <= mem_load_data;  
             end
-            result <= mem_store_data;
+            result <= mem_load_data;
             carry <= mem_carry;
         end
         else if(write_back[31:29] != STORE) begin
@@ -303,8 +362,9 @@ module cpu(
             carry <= mem_carry;
         end
     end
+    
 
-    assign mem_radrs_ir = pc_cnt;
+    assign mem_radrs_ir = pc_cnt; //TODO : This is useless now
     assign read_mem_ir = fetch_enabled ? 1'b1 : 1'b0;
     
 endmodule

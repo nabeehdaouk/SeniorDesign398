@@ -10,6 +10,7 @@ module memory(
     input r_en2,                    //Read enable 2
     output reg r_valid1,            //Read valid 1
     output reg r_valid2,            //Read valid 2
+    output reg w_valid1,            //Write valid 1
     output reg [31:0] data_out1,    //Data out 1
     output reg [31:0] data_out2     //Data out 2
 );
@@ -27,13 +28,22 @@ module memory(
             end
         end else begin
             if(w_en) begin
-                mem[w_adrs] <= data_in;
+                 mem[w_adrs] <= data_in;
+                 w_valid1 <= 1;
+            end else begin
+                 w_valid1 <= 0;
             end
             if(r_en1) begin
-               data_out1 <= mem[r_adrs1];
+                data_out1 <= mem[r_adrs1];
+                r_valid1 <= 1;
+            end else begin
+                r_valid1 <= 0;
             end
             if(r_en2) begin
-               data_out2 <=  mem[r_adrs2];
+                data_out2 <=  mem[r_adrs2];
+                r_valid2 <= 1;
+            end else begin
+                r_valid2 <= 0;
             end
         end    
     end
