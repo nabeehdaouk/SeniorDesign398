@@ -1,6 +1,7 @@
 module arbiter_tb();
 
-    reg clk, resetn, r_adrs1;
+    reg clk, resetn;
+    reg [10:0] r_adrs1;
     wire [31:0] FIFO_1, FIFO_2, data_out1;
 
 
