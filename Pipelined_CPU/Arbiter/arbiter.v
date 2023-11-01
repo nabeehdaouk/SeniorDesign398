@@ -21,13 +21,19 @@ module arbiter(
     integer i;
     integer j;
 
+    reg [21:0] src_dest1_adrs [7:0];
+    reg [21:0] src_dest2_adrs [7:0];
+    reg load;
+    
+    localparam LD = 3'b111;
+    localparam STR = 3'b110;
 
 
     always @(posedge clk) begin
         if (!resetn) begin
             fifo_sel <= 1'b0;
-            FIFO_1<= 32'b0;
-            FIFO_2<= 32'b0;
+            FIFO_1 <= 32'b0;
+            FIFO_2 <= 32'b0;
         end
         else begin
             instr_buff <= instr;
@@ -77,4 +83,9 @@ module arbiter(
             endcase
         end
     end
+
+    always @(load) begin
+        
+    end
+    
 endmodule
