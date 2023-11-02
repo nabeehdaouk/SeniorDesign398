@@ -7,11 +7,11 @@ module arbiter_tb2();
 	
 	arbiter arbiter_instance(
 	    .instr(instr),
-	    .resetn(resetn),
-	    .FIFO_1(FIFO_1),
-	    .FIFO_2(FIFO_2)
+	    .resetn(rstn),
+	    .FIFO_1(FIFO1),
+	    .FIFO_2(FIFO2)
 	);
-	
+
 	
 	initial begin
 	   $monitor($time,"Instruction sent = %b, FIFO1 instr = %b   FIFO2 instr = %b",instr, FIFO1, FIFO2);
