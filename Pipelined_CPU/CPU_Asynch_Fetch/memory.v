@@ -18,14 +18,31 @@ module memory(
     reg [31:0] mem [2047:0];
     integer i;
     
+    
+    initial begin
+        mem[0] = 'h0;
+        mem[1] = 32'b111_00_000_0_0_0_00000_00011_0_00000_11110; //LOAD MEM30 REG_A_3
+        mem[2] = 32'h0;                                          //NOP TODO : Figure out why we cant load back to back  
+        mem[3] = 32'b111_00_000_0_0_1_00011_00000_0_00000_11111; //LOAD MEM31 REG_B_3
+        mem[4] = 32'b101_00_001_0_0_0_00000_00000_0_00000_00000; //BRANCH EQZ MEM0
+        mem[5] = 32'b110_00_000_0_1_1_11111_11110_0_00000_00011; //STORE REG_A_3 MEM2046
+        mem[6] = 32'b100_00_000_1_0_1_00011_00000_0_00000_00001; //ADD 1 REG_B_3
+        mem[7] = 32'b100_00_000_1_0_0_00000_00011_0_00000_00101; //ADD 5 REG_A_3
+        mem[8] = 32'b011_00_000_0_0_0_00000_00011_0_00000_00011; //SUB REG_B_3 REG_A_3
+        mem[9] = 32'b001_00_000_1_0_0_00000_00111_0_01010_10101; //OR REGA_7 341
+        mem[10] = 32'b010_00_000_0_0_0_00000_00011_0_00000_00101;//AND REGA_3 REGA_7
+        mem[30] = 32'h0000_000F;
+        mem[31] = 32'h0000_0005;
+    end
+    
     always @(posedge clk) begin: Read_Write_Memory
 
         if (!resetn) begin
             data_out1 <= 0;
             data_out2 <= 0;
-            for(i = 0; i < 2048; i = i + 1) begin
-               mem[i] <= 0; 
-            end
+            //for(i = 0; i < 2048; i = i + 1) begin
+              // mem[i] <= 0; 
+            //end
         end else begin
             if(w_en) begin
                  mem[w_adrs] <= data_in;

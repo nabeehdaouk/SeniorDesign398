@@ -3,9 +3,9 @@ module cpu(
     input resetn,                       //Global reset signal
     input [31:0] instruction_fetch,     //Instruction fetched from memory
     input [31:0] mem_load_data,         //Data read from memory that will be loaded
-    input fetch_enabled,                //States if the fetch is enabled
     input read_load_valid,              //State we read from memory sucessfully
     input write_store_valid,            //States store instruction was valid 
+    input fifo_empty,                   //States the fifo is empty
     output reg branch_valid,            //States branch was valid
     output reg read_mem_load,           //Read enable for reading for a load
     output reg [10:0] branch_address,   //Defines branch address, only taken if valid
@@ -15,8 +15,8 @@ module cpu(
     output reg [31:0] mem_wdata,        //Used for STORE instruction, information to be stored in memory
     output reg [10:0] mem_wadrs,        //Write address to memory
     output reg [10:0] mem_radrs_ld,     //Read address to read from memoroy used for load instructions
-    output read_mem_ir,                 //Read enable for reading instructions
-    output [10:0] mem_radrs_ir          //Read address to read from memory used for fetching instructions
+    output [10:0] mem_radrs_ir,         //Read address to read from memory used for fetching instructions
+    output read_fifo                    //States fifo should be read
 );
 
     localparam LOAD = 3'b111;
@@ -31,8 +31,7 @@ module cpu(
     reg [31:0] decode;                  //Stores the information being decoded
     reg [31:0] execute;
     reg [31:0] mem;
-    reg [31:0] write_back;
-    wire [10:0] pc_cnt;                  //Stores program count
+    reg [31:0] write_back;  
     
     reg [31:0] file_reg_A [31:0];
     reg [31:0] file_reg_B [31:0];
@@ -109,6 +108,7 @@ module cpu(
             branch_valid <= 0;
             execute_result <= 0;
             execute_carry <= 0;
+            stall_pipe <= 0;
         end
         else if(!branch_valid && !stall_pipe) begin
         
@@ -252,10 +252,10 @@ module cpu(
                     write_mem <= 1;
                     mem_wadrs <= execute[21:11];
                     if(execute[10]) begin
-                        mem_wdata <= file_reg_B[mem[9:5]];
+                        mem_wdata <= file_reg_B[execute[9:5]];
                     end 
                     else begin
-                        mem_wdata <= file_reg_A[mem[4:0]];
+                        mem_wdata <= file_reg_A[execute[4:0]];
                     end
                     execute_result <= 0;
                     execute_carry <= 1'b0; //set carry to 0
@@ -364,7 +364,7 @@ module cpu(
     end
     
 
-    assign mem_radrs_ir = pc_cnt; //TODO : This is useless now
-    assign read_mem_ir = fetch_enabled ? 1'b1 : 1'b0;
+    assign mem_radrs_ir = 0; //TODO : This is useless now
+    assign read_fifo = ~fifo_empty & ~stall_pipe; //Enable read from memory to FIFO when the
     
 endmodule
