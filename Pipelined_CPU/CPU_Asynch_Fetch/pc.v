@@ -3,6 +3,7 @@ module pc(
     input resetn,                   //Reset pc register
     input branch_valid,             //Branch control 
     input [10:0] branch_address,    //Branch address
+    input fifo_full,                //Fifo full so dont fount
     output reg [10:0] cnt           //Holds program count
 );
 
@@ -12,7 +13,7 @@ module pc(
         end else begin
             if (branch_valid) begin     //If branch control is active high, count is set to branch address
                 cnt <= branch_address;
-            end else begin              //Else count = count + 1
+            end else if (!fifo_full) begin              //Else count = count + 1
                 cnt <= cnt + 1;
             end
         end
