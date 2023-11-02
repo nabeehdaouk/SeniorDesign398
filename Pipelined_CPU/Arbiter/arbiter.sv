@@ -5,7 +5,6 @@ module arbiter(
     output reg [31:0] FIFO_1, //Into first FIFO connected to core 1
     output reg [31:0] FIFO_2 //Into second FIFO connected to core 2
 );
-    reg [31:0] instr_buff;
     reg fifo_sel;
     reg [31:0] fifo_1_que [31:0];
     reg [31:0] fifo_2_que [31:0];
@@ -21,13 +20,6 @@ module arbiter(
     integer i;
     integer j;
 
-    reg [21:0] src_dest1_adrs [7:0];
-    reg [21:0] src_dest2_adrs [7:0];
-    reg load;
-    
-    localparam LD = 3'b111;
-    localparam STR = 3'b110;
-
 
     always @(posedge clk) begin
         if (!resetn) begin
@@ -36,7 +28,6 @@ module arbiter(
             FIFO_2 <= 32'b0;
         end
         else begin
-            instr_buff <= instr;
             fifo_sel <= ~fifo_sel;
             //FIFO_1 <= (fifo_sel==1'b0)? instr: FIFO_1;
             //FIFO_2 <= (fifo_sel==1'b1)? instr: FIFO_2;
@@ -52,10 +43,10 @@ module arbiter(
                         end
                         if ((|src_dest_1) || (|dest_src_1) || (|dest_dest_1))
                             begin
-                                fifo_2_que<= {fifo_2_que[30:0], instr_buff};
+                                fifo_2_que= {fifo_2_que[30:0], instr};
                             end
                         else begin
-                            fifo_1_que<= {fifo_1_que[30:0], instr_buff};
+                            fifo_1_que= {fifo_1_que[30:0], instr};
                         end
                     end
                 end
@@ -71,21 +62,14 @@ module arbiter(
                         end
                         if ((|src_dest_2) || (|dest_src_2) || (|dest_dest_2))
                             begin
-                                fifo_1_que<= {fifo_1_que[30:0], instr_buff};
+                                fifo_1_que<= {fifo_1_que[30:0], instr};
                             end
                         else begin
-                            fifo_2_que<= {fifo_2_que[30:0], instr_buff};
+                            fifo_2_que<= {fifo_2_que[30:0], instr};
                         end
                     end
                 end
-
-
             endcase
         end
     end
-
-    always @(load) begin
-        
-    end
-    
 endmodule
