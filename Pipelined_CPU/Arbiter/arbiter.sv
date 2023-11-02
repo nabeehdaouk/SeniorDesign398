@@ -18,6 +18,7 @@ module arbiter(
 
     integer i;
     integer j;
+    integer k;
 
     assign FIFO_1= fifo_1_que[0];
     assign FIFO_2= fifo_2_que[0];
@@ -31,9 +32,9 @@ module arbiter(
             src_dest_2= 32'b0;
             dest_src_2= 32'b0;
             dest_dest_2= 32'b0;
-            for (int i = 0; i < 32; i = i + 1) begin
-                fifo_1_que[i] = 32'b0;
-                fifo_2_que[i] = 32'b0;
+            for (int k = 0; k < 32; k = k + 1) begin
+                fifo_1_que[k] = 32'b0;
+                fifo_2_que[k] = 32'b0;
             end
         end
         else begin
