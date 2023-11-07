@@ -1,20 +1,21 @@
 module arbiter_tb2();
     reg [31:0] instr;
     reg rstn;
-
-    wire [31:0] FIFO1;
-    wire [31:0] FIFO2;
+    wire [31:0] instr_out;
+    wire FIFO_1_en;
+    wire FIFO_2_en;
 
     arbiter arbiter_instance(
         .instr(instr),
         .resetn(rstn),
-        .FIFO_1(FIFO1),
-        .FIFO_2(FIFO2)
+        .FIFO_1_en(FIFO_1_en),
+        .FIFO_2_en(FIFO_2_en),
+        .instr_out(instr_out)
     );
 
 
     initial begin
-        $monitor($time,"    Instruction sent = %h, FIFO1 instr = %h   FIFO2 instr = %h",instr, FIFO1, FIFO2);
+        $monitor($time,"    Instruction sent = %h, FIFO1 instr = %h   FIFO2 instr = %h",instr, FIFO_1_en, FIFO_2_en);
         rstn = 0;
         instr = 32'hFFFF_FFFF;
         
@@ -69,11 +70,11 @@ module arbiter_tb2();
         $display("next 3 instr should all go into OTHER fifo");
         instr = 32'b001_00_000_0_0_1_10000_10101_1_00000_00001;
 
-        #10 //Arbiter sends data to FIFO 1 with same destination adrs
-        instr = ;
+       // #10 //Arbiter sends data to FIFO 1 with same destination adrs
+        //instr = ;
 //FINISH FROM HERE
-        #10 //Arbiter sends data to FIFO 1 with same source adrs
-        instr = ;
+       // #10 //Arbiter sends data to FIFO 1 with same source adrs
+       // instr = ;
 
     end
 
