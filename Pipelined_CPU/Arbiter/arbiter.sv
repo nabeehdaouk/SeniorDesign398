@@ -1,8 +1,9 @@
 module arbiter(
     input [31:0] instr,
     input resetn,
-    output reg [31:0] FIFO_1, //Into first FIFO connected to core 1
-    output reg [31:0] FIFO_2 //Into second FIFO connected to core 2
+    output reg [31:0] instr_out,
+    output reg FIFO_1_en, //Into first FIFO connected to core 1
+    output reg FIFO_2_en //Into second FIFO connected to core 2
 );
     reg fifo_sel;
     reg [31:0] fifo_1_que [7:0];
@@ -20,8 +21,9 @@ module arbiter(
     integer j;
     integer ii;
 
-    assign FIFO_1= fifo_1_que[0];
-    assign FIFO_2= fifo_2_que[0];
+    //assign FIFO_1= fifo_1_que[0];
+    //assign FIFO_2= fifo_2_que[0];
+    assign instr_out= instr;
 
     always @(instr) begin
         if (!resetn) begin
@@ -43,11 +45,15 @@ module arbiter(
                     if (instr[27] ==1'b0)
                     begin
                         fifo_1_que= {fifo_1_que[6:0], instr};
+                        FIFO_1_en= 1'b1;
+                        FIFO_2_en= 1'b0;
                         fifo_sel = 1'b1;
                     end
                     if (instr[27] ==1'b1)
                     begin
                         fifo_2_que= {fifo_2_que[6:0], instr};
+                        FIFO_1_en= 1'b0;
+                        FIFO_2_en= 1'b1;
                         fifo_sel = 1'b0;
                     end
                 end
@@ -66,15 +72,21 @@ module arbiter(
                                     if ((|src_dest_1) || (|dest_src_1) || (|dest_dest_1))
                                         begin
                                             fifo_2_que= {fifo_2_que[6:0], instr};
+                                            FIFO_1_en= 1'b0;
+                                            FIFO_2_en= 1'b1;
                                             fifo_sel = 1'b0;
                                         end
                                     else begin
                                         fifo_1_que= {fifo_1_que[6:0], instr};
+                                        FIFO_1_en= 1'b1;
+                                        FIFO_2_en= 1'b0;
                                         fifo_sel = 1'b1;
                                     end
                                 end
                             else begin
                                 fifo_1_que= {fifo_1_que[6:0], instr};
+                                FIFO_1_en= 1'b1;
+                                FIFO_2_en= 1'b0;
                                 fifo_sel = 1'b1;
                             end
                         end
@@ -91,18 +103,30 @@ module arbiter(
                                     if ((|src_dest_2) || (|dest_src_2) || (|dest_dest_2))
                                         begin
                                             fifo_1_que= {fifo_1_que[6:0], instr};
+                                            FIFO_1_en= 1'b1;
+                                            FIFO_2_en= 1'b0;
                                             fifo_sel = 1'b1;
                                         end
                                     else begin
                                         fifo_2_que= {fifo_2_que[6:0], instr};
+                                        FIFO_1_en= 1'b0;
+                                        FIFO_2_en= 1'b1;
                                         fifo_sel = 1'b0;
                                     end
                                 end
                             else
                                 begin
                                     fifo_2_que= {fifo_2_que[6:0], instr};
+                                    FIFO_1_en= 1'b0;
+                                    FIFO_2_en= 1'b1;
                                     fifo_sel = 1'b0;
                                 end
+                        end
+                        default begin
+                            fifo_1_que= {fifo_1_que[6:0], instr};
+                            FIFO_1_en= 1'b1;
+                            FIFO_2_en= 1'b0;
+                            fifo_sel = 1'b1;
                         end
                     endcase
                 end
