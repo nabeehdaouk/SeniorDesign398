@@ -18,7 +18,7 @@ module arbiter(
 
     integer i;
     integer j;
-    integer k;
+    integer ii;
 
     assign FIFO_1= fifo_1_que[0];
     assign FIFO_2= fifo_2_que[0];
@@ -32,20 +32,20 @@ module arbiter(
             src_dest_2= 32'b0;
             dest_src_2= 32'b0;
             dest_dest_2= 32'b0;
-            for (int k = 0; k < 8; k = k + 1) begin
-                fifo_1_que[k] = 32'b0;
-                fifo_2_que[k] = 32'b0;
+            for (int ii = 0; ii < 8; ii = ii + 1) begin
+                fifo_1_que[ii] = 32'b0;
+                fifo_2_que[ii] = 32'b0;
             end
         end
         else begin
-            if (instr[27] == 1'b1)
+            if (instr[28] == 1'b1)
                 begin
-                    if (instr[26] ==1'b0)
+                    if (instr[27] ==1'b0)
                     begin
                         fifo_1_que= {fifo_1_que[6:0], instr};
                         fifo_sel = 1'b1;
                     end
-                    if (instr[26] ==1'b1)
+                    if (instr[27] ==1'b1)
                     begin
                         fifo_2_que= {fifo_2_que[6:0], instr};
                         fifo_sel = 1'b0;
@@ -84,9 +84,9 @@ module arbiter(
                             if ((instr[23]== 1'b0) || (instr[22] ==1'b0))
                                 begin
                                     for (j = 0; j <8; j = j + 1) begin
-                                        src_dest_2[i]= (((~instr[10])&&({instr[23], instr[10], instr[4:0]} == {fifo_1_que[i][22], fifo_1_que[i][21], fifo_1_que[i][15:11]})) || ((instr[10])&&({instr[23], instr[10], instr[9:5]} == {fifo_1_que[i][22], fifo_1_que[i][21], fifo_1_que[i][20:16]})))?1'b1:1'b0;
-                                        dest_src_2[i]= (((~instr[21])&&({instr[22], instr[21], instr[15:11]} == {fifo_1_que[i][23], fifo_1_que[i][10], fifo_1_que[i][4:0]})) || ((instr[21])&&({instr[22], instr[21], instr[20:16]} == {fifo_1_que[i][23], fifo_1_que[i][10], fifo_1_que[i][9:5]})))?1'b1:1'b0;
-                                        dest_dest_2[i]= (((~instr[21])&&({instr[22], instr[21], instr[15:11]} == {fifo_1_que[i][22], fifo_1_que[i][21], fifo_1_que[i][15:11]})) || ((instr[21])&&({instr[22], instr[21], instr[20:16]} == {fifo_1_que[i][22], fifo_1_que[i][21], fifo_1_que[i][20:16]})))?1'b1:1'b0;
+                                        src_dest_2[j]= (((~instr[10])&&({instr[23], instr[10], instr[4:0]} == {fifo_1_que[j][22], fifo_1_que[j][21], fifo_1_que[j][15:11]})) || ((instr[10])&&({instr[23], instr[10], instr[9:5]} == {fifo_1_que[j][22], fifo_1_que[j][21], fifo_1_que[j][20:16]})))?1'b1:1'b0;
+                                        dest_src_2[j]= (((~instr[21])&&({instr[22], instr[21], instr[15:11]} == {fifo_1_que[j][23], fifo_1_que[j][10], fifo_1_que[j][4:0]})) || ((instr[21])&&({instr[22], instr[21], instr[20:16]} == {fifo_1_que[j][23], fifo_1_que[j][10], fifo_1_que[j][9:5]})))?1'b1:1'b0;
+                                        dest_dest_2[j]= (((~instr[21])&&({instr[22], instr[21], instr[15:11]} == {fifo_1_que[j][22], fifo_1_que[j][21], fifo_1_que[j][15:11]})) || ((instr[21])&&({instr[22], instr[21], instr[20:16]} == {fifo_1_que[j][22], fifo_1_que[j][21], fifo_1_que[j][20:16]})))?1'b1:1'b0;
                                     end
                                     if ((|src_dest_2) || (|dest_src_2) || (|dest_dest_2))
                                         begin
