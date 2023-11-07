@@ -15,7 +15,6 @@ module cpu(
     output reg [31:0] mem_wdata,        //Used for STORE instruction, information to be stored in memory
     output reg [10:0] mem_wadrs,        //Write address to memory
     output reg [10:0] mem_radrs_ld,     //Read address to read from memoroy used for load instructions
-    output [10:0] mem_radrs_ir,         //Read address to read from memory used for fetching instructions
     output read_fifo                    //States fifo should be read
 );
 
@@ -364,7 +363,6 @@ module cpu(
     end
     
 
-    assign mem_radrs_ir = 0; //TODO : This is useless now
     assign read_fifo = ~fifo_empty & ~stall_pipe; //Enable read from memory to FIFO when the
     
 endmodule

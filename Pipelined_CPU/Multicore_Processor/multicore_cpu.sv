@@ -30,8 +30,6 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     logic read_load_valid;                  //Output from Memory to SYNCH, to CPU - states read from mem for load sucessful
     logic write_store_valid;                //Output from Memory to SYNCH, to CPU - state write from mem for store sucessful
  
-    logic [31:0] mem_radrs_ir;              //TODO : Remove this
-    
     logic memory_read_load;                 //Ouput by SYCNH to Memory - read enable 1
     logic [10:0] memory_radrs_load;         //Output by SYNCH to Memory - memory read address for load
     logic [31:0] memory_load_data_out;      //Output by SYNCH to CPU - data that is being loaded
@@ -45,28 +43,8 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
       
     assign memory_insturction_r_en = ~full & ~branch_valid;
     assign resetn_branch = (resetn == 1 && branch_valid == 0); 
-       
-    cpu cpu_instance(
-        .clk(core_clk),
-        .resetn(resetn),
-        .instruction_fetch(instruction_fetch),
-        .read_load_valid(read_load_valid),
-        .write_store_valid(write_store_valid),
-        .fifo_empty(empty),
-        .mem_load_data(mem_load_data),
-        .branch_valid(branch_valid),
-        .read_mem_load(read_mem_load),
-        .branch_address(branch_address),
-        .write_mem(write_mem_store),
-        .carry(carry),
-        .result(result),
-        .mem_wdata(mem_wdata_store),
-        .mem_wadrs(mem_wadrs_store),
-        .mem_radrs_ld(mem_radrs_load),
-        .read_fifo(read_fifo),
-        .mem_radrs_ir(mem_radrs_ir)
-    );
     
+    //Shared modules
     pc pc_instance(
         .clk(sys_clk),
         .resetn(resetn),
@@ -75,26 +53,8 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
         .fifo_full(full),
         .cnt(mem_instruction_radrs)
     );
-    
-    asynchronous_fifo #(
-        .DATA_SIZE(DATA_SIZE),
-        .MEM_SIZE(MEM_SIZE)
-    ) asynchronous_fifo_instance(
-        .wclk(sys_clk),
-        .rclk(core_clk),
-        .w_en(mem_instruction_read_valid),
-        .r_en(read_fifo),
-        .w_rstn_only(resetn),
-        .r_rstn_only(resetn),
-        .fifo_rstn(resetn_branch),
-        .w_data(mem_instruction_data_out),
-        .r_valid(r_valid), // @suppress "An implicit net wire logic was inferred for 'r_valid'"
-        .w_valid(w_valid), // @suppress "An implicit net wire logic was inferred for 'w_valid'"
-        .r_data(instruction_fetch),
-        .full(full),
-        .empty(empty)
-    );
-    
+      
+      
     memory memory_instance(
         .clk(sys_clk),
         .resetn(resetn),
@@ -118,6 +78,47 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
         .data_out1(mem_instruction_data_out),
         .data_out2(memory_load_data_out),
         .data_out3(memory_load_data_out2)
+    );
+    
+    //Modules for core path 1
+    cpu cpu_instance(
+        .clk(core_clk),
+        .resetn(resetn),
+        .instruction_fetch(instruction_fetch),
+        .read_load_valid(read_load_valid),
+        .write_store_valid(write_store_valid),
+        .fifo_empty(empty),
+        .mem_load_data(mem_load_data),
+        .branch_valid(branch_valid),
+        .read_mem_load(read_mem_load),
+        .branch_address(branch_address),
+        .write_mem(write_mem_store),
+        .carry(carry),
+        .result(result),
+        .mem_wdata(mem_wdata_store),
+        .mem_wadrs(mem_wadrs_store),
+        .mem_radrs_ld(mem_radrs_load),
+        .read_fifo(read_fifo)
+    );
+    
+    
+    asynchronous_fifo #(
+        .DATA_SIZE(DATA_SIZE),
+        .MEM_SIZE(MEM_SIZE)
+    ) asynchronous_fifo_instance(
+        .wclk(sys_clk),
+        .rclk(core_clk),
+        .w_en(mem_instruction_read_valid),
+        .r_en(read_fifo),
+        .w_rstn_only(resetn),
+        .r_rstn_only(resetn),
+        .fifo_rstn(resetn_branch),
+        .w_data(mem_instruction_data_out),
+        .r_valid(r_valid), // @suppress "An implicit net wire logic was inferred for 'r_valid'"
+        .w_valid(w_valid), // @suppress "An implicit net wire logic was inferred for 'w_valid'"
+        .r_data(instruction_fetch),
+        .full(full),
+        .empty(empty)
     );
 
     //Synch read_mem_load to memory
@@ -200,5 +201,8 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
         .data_in(mem_wdata_store),
         .data_out(memory_store_data_in)
     );
+    
+    
+    //Modules for core path 2
     
 endmodule
