@@ -37,8 +37,9 @@ module arbiter_tb2();
         #10
         instr = 32'h000abcde;
         
-$display("test override");
+
         #10 //Arbiter override send to FIFO1
+        $display("test override");
         rstn = 1;
         instr = 32'b000_10_000_0_0_0_00000_00001_0_00000_00001;
         
@@ -52,31 +53,27 @@ $display("test override");
          #10 //Arbiter override send to FIFO2
         instr = 32'b000_11_000_0_0_0_00000_00001_0_00000_01111;
 
-$display("reg collition testing");
-        #10 //Arbiter sends data to FIFO 1 with different src adrs
+
+        #10 //Arbiter sends data to FIFO 2 with different src adrs
+        $display("reg collition testing");
+        $display("next 3 instr should all go into same fifo");
         instr = 32'b000_00_000_0_0_0_10000_10001_0_00000_10101;
 
-        #10 //Arbiter sends data to FIFO 1 with same dest as src adrs
+        #10 //Arbiter sends data to FIFO 2 with same dest as src adrs
         instr = 32'b001_00_000_0_0_0_10000_10101_0_00000_10101;
 
-         #10 //Arbiter sends data to FIFO 1 with different src adrs
-        instr = 32'b000_00_000_0_0_0_11000_00011_1_00001_10001;
+        #10 //Arbiter sends data to FIFO 2 with same dest adrs as last dest
+        instr = 32'b001_00_000_0_0_0_10000_10101_1_00000_10101;
 
-        #10 //Arbiter sends data to FIFO 1 with same src adrs
-        instr = 32'b001_00_000_0_0_1_11000_00011_0_00001_11001;
+        #10 //Arbiter sends data to FIFO 1 with different destination adrs
+        $display("next 3 instr should all go into OTHER fifo");
+        instr = 32'b001_00_000_0_0_1_10000_10101_1_00000_00001;
 
-
+        #10 //Arbiter sends data to FIFO 1 with same destination adrs
+        instr = ;
+//FINISH FROM HERE
         #10 //Arbiter sends data to FIFO 1 with same source adrs
-        instr = 32'b000_00_000_0_0_00000_1110_00000_0001;
-
-        #10 //Arbiter sends data to FIFO 2 with different destination adrs
-        instr = 32'b000_00_000_0_0_00000_1000_00000_1000;
-
-        #10 //Arbiter sends data to FIFO 2 with same destination adrs
-        instr = 32'b000_00_000_0_0_10000_0000_11000_0000;
-
-        #10 //Arbiter sends data to FIFO 2 with same source adrs
-        instr = 32'b000_00_000_0_0_00000_1010_10000_0000;
+        instr = ;
 
     end
 
