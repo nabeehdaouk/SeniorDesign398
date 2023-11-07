@@ -14,7 +14,7 @@ module arbiter_tb2();
 
 	
 	initial begin
-	   $monitor($time,"Instruction sent = %b, FIFO1 instr = %b   FIFO2 instr = %b",instr, FIFO1, FIFO2);
+	   $monitor($time,"    Instruction sent = %h, FIFO1 instr = %h   FIFO2 instr = %h",instr, FIFO1, FIFO2);
 	   rstn = 0;
 	   instr = 32'hFFFF_FFFF;
 	   
