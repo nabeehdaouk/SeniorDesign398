@@ -46,6 +46,10 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     logic arb_w_en_one;                     //Arbiter write outputs
     logic fifo_w_en_one;                    //FIFO write enable one
     
+    //Shared wires
+    logic pc_branch;
+    logic [10:0] pc_branch_address;
+    logic arb_instr_out;
     
     //Modules for core path 1    
     //cpu core #1
@@ -81,7 +85,7 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
         .w_rstn_only(resetn),
         .r_rstn_only(resetn),
         .fifo_rstn(resetn_branch),
-        .w_data(mem_instruction_data_out),
+        .w_data(arb_instr_out),
         .r_valid(r_valid), // @suppress "An implicit net wire logic was inferred for 'r_valid'"
         .w_valid(w_valid), // @suppress "An implicit net wire logic was inferred for 'w_valid'"
         .r_data(instruction_fetch),
@@ -172,15 +176,13 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     
     
     
-    //Wires for data path #2
-    
+    //Wires for data path #2  
     logic branch_valid2;                    //Output by CPU, to PC - States branch was valid
     logic [10:0] branch_address2;           //Output by CPU, to PC - States branch address, overrides PC
     
     logic [31:0] instruction_fetch2;        //Output by FIFO, to CPU - States instruction data that has been fetched
     
     logic mem_instruction_read_valid2;      //Output by Memory, to FIFO - States instruction read was valid, used as enable to FIFO
-    logic [31:0] mem_instruction_data_out2; //Output by Memory, to FIFO - States write data
     logic full2;                            //Output by FIFO, to Memory - States if we can read more or not 
     logic empty2;                           //Output by FIFO, to CPU - States if we can fetch or not                                    
     logic read_fifo2;                       //Output by CPU to FIFO - states CPU will read from fifo
@@ -208,7 +210,6 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
       
     logic arb_w_en_two;                     //Arbiter write outputs
     logic fifo_w_en_two;                    //FIFO write enable one and two 
-    
     
     //Modules for core path 2
     //cpu core 2
@@ -244,7 +245,7 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
         .w_rstn_only(resetn),
         .r_rstn_only(resetn),
         .fifo_rstn(resetn_branch),
-        .w_data(mem_instruction_data_out2),
+        .w_data(arb_instr_out),
         .r_valid(r_valid), // @suppress "An implicit net wire logic was inferred for 'r_valid'"
         .w_valid(w_valid), // @suppress "An implicit net wire logic was inferred for 'w_valid'"
         .r_data(instruction_fetch2),
@@ -334,10 +335,6 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     );
     
     
-    //Shared wires
-    logic pc_branch;
-    logic [10:0] pc_branch_address;
-    
     //Shared modules    
     pc pc_instance(
         .clk(sys_clk),
@@ -377,8 +374,9 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     arbiter arbiter_instance(
         .instr(mem_instruction_data_out),
         .resetn(resetn),
-        .FIFO_1(arb_w_en_one),
-        .FIFO_2(arb_w_en_two)
+        .instr_out(arb_instr_out),
+        .FIFO_1_en(arb_w_en_one),
+        .FIFO_2_en(arb_w_en_two)
     );
     
     //Assigns
