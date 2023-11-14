@@ -30,7 +30,7 @@ module memory(
     initial begin
         mem[0] = 'h0;
         mem[1] = 32'b111_00_000_0_0_0_00000_00011_0_00000_11110; //LOAD MEM30 REG_A_3
-        mem[2] = 32'h0;                                          //NOP TODO : Figure out why we cant load back to back  
+        mem[2] = 32'h0;                                          
         mem[3] = 32'b111_00_000_0_0_1_00011_00000_0_00000_11111; //LOAD MEM31 REG_B_3
         mem[4] = 32'b101_00_001_0_0_0_00000_00000_0_00000_00000; //BRANCH EQZ MEM0
         mem[5] = 32'b110_00_000_0_1_1_11111_11110_0_00000_00011; //STORE REG_A_3 MEM2046

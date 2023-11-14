@@ -49,7 +49,7 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     //Shared wires
     logic pc_branch;
     logic [10:0] pc_branch_address;
-    logic arb_instr_out;
+    logic [31:0] arb_instr_out;
     
     //Modules for core path 1    
     //cpu core #1
@@ -182,7 +182,6 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     
     logic [31:0] instruction_fetch2;        //Output by FIFO, to CPU - States instruction data that has been fetched
     
-    logic mem_instruction_read_valid2;      //Output by Memory, to FIFO - States instruction read was valid, used as enable to FIFO
     logic full2;                            //Output by FIFO, to Memory - States if we can read more or not 
     logic empty2;                           //Output by FIFO, to CPU - States if we can fetch or not                                    
     logic read_fifo2;                       //Output by CPU to FIFO - states CPU will read from fifo
@@ -206,7 +205,7 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     logic memory_read_load_valid2;          //Output by Memory to SYNCH - read valid 2 output
     logic memory_write_store_valid2;        //Oupput by Memory to SYNCH - write valid 1 output
     logic [31:0] memory_store_data_in2;     //Output by Memory to SYNCH - write store data
-    logic [11:0] memory_wadrs_store2;       //Output by Memory to SYNCH - wadrs to store data
+    logic [10:0] memory_wadrs_store2;       //Output by Memory to SYNCH - wadrs to store data
       
     logic arb_w_en_two;                     //Arbiter write outputs
     logic fifo_w_en_two;                    //FIFO write enable one and two 
@@ -339,8 +338,8 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     pc pc_instance(
         .clk(sys_clk),
         .resetn(resetn),
-        .branch_valid(branch_valid),     //TODO : Fix branch address
-        .branch_address(branch_address), //TODO : Fix branch address
+        .branch_valid(branch_valid),     
+        .branch_address(branch_address), 
         .fifo_full(full),
         .cnt(mem_instruction_radrs)
     );
@@ -382,8 +381,8 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     //Assigns
     assign pc_branch = branch_valid | branch_valid2;
     assign pc_branch_address = branch_valid ? branch_address : (branch_valid2 ? branch_address2 : 0);
-    assign fifo_w_en_one = arb_w_en_one && mem_instruction_read_valid;
-    assign fifo_w_en_two = arb_w_en_two && mem_instruction_read_valid2;
+    assign fifo_w_en_one = arb_w_en_one & mem_instruction_read_valid;
+    assign fifo_w_en_two = arb_w_en_two & mem_instruction_read_valid;
     assign memory_insturction_r_en = ~full & ~branch_valid & ~branch_valid2;
     assign resetn_branch = (resetn == 1 && branch_valid == 0 && branch_valid2 == 0);
     
