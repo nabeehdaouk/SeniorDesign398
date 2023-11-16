@@ -1,7 +1,9 @@
 module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
-    input core_clk, sys_clk,
+    input core_clk, sys_clk, picture_clk,
     input resetn,
+    input [10:0] picture_radrs,
     output logic carry, carry2,
+    output logic [23:0] picture_data,
     output logic [31:0] result,result2
 );
 
@@ -347,12 +349,14 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
       
     memory memory_instance(
         .clk(sys_clk),
+        .picture_clk(picture_clk),
         .resetn(resetn),
         .w_adrs(memory_wadrs_store),
         .w_adrs2(memory_wadrs_store2),
         .r_adrs1(mem_instruction_radrs),
         .r_adrs2(memory_radrs_load),
         .r_adrs3(memory_radrs_load2),
+        .picture_radrs(picture_radrs),
         .data_in(memory_store_data_in),
         .data_in2(memory_store_data_in2),
         .w_en(memory_write_store),
@@ -367,7 +371,8 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
         .w_valid2(memory_write_store_valid2),
         .data_out1(mem_instruction_data_out),
         .data_out2(memory_load_data_out),
-        .data_out3(memory_load_data_out2)
+        .data_out3(memory_load_data_out2),
+        .picture_data(picture_data)
     );
     
     arbiter arbiter_instance(

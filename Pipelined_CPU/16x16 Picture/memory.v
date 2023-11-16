@@ -1,11 +1,13 @@
 module memory(
     input clk,                      //Clock
+    input picture_clk,              //Clock for the picture
     input resetn,                   //Active low reset
     input [10:0] w_adrs,            //Write address
     input [10:0] w_adrs2,           //Write address 2
     input [10:0] r_adrs1,           //Read address 1
     input [10:0] r_adrs2,           //Read address 2
     input [10:0] r_adrs3,           //Read address 3
+    input [10:0] picture_radrs,     //Read address for the picture index
     input [31:0] data_in,           //Data in
     input [31:0] data_in2,          //Data in 2
     input w_en,                     //Write enable
@@ -20,7 +22,8 @@ module memory(
     output reg w_valid2,            //Write valid2
     output reg [31:0] data_out1,    //Data out 1
     output reg [31:0] data_out2,    //Data out 2
-    output reg [31:0] data_out3
+    output reg [31:0] data_out3,    //Data out 3
+    output reg [23:0] picture_data  //Picture data output
 );
 
     reg [31:0] mem [2047:0];
@@ -32,9 +35,10 @@ module memory(
         if (!resetn) begin
             data_out1 <= 0;
             data_out2 <= 0;
-            for(i = 0; i < 2048; i = i + 1) begin
+            for(i = 0; i < 1792; i = i + 1) begin
                 mem[i] <= 0; 
             end
+            //INSERT PICTURE DATA HERE, LEFT TO RIGHT TOP TO BOTTOM
         end else begin
             if(w_en) begin
                  mem[w_adrs] <= data_in;
@@ -66,6 +70,10 @@ module memory(
                 r_valid3 <= 0;
             end
         end    
+    end
+    
+    always @(posedge picture_clk) begin
+        picture_data <= mem[picture_radrs][23:0];
     end
     
 endmodule
