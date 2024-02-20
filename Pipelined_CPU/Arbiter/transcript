@@ -1,30 +1,29 @@
-# Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
-# vsim -gui work.arbiter_tb2 
-# Start time: 00:18:21 on Feb 20,2024
+# vsim -c work.arbiter_tb2 -do "run -all; quit -f" 
+# Start time: 14:01:54 on Feb 20,2024
 # Loading work.arbiter_tb2
 # Loading sv_std.std
 # Loading work.arbiter
-restert
-# invalid command name "restert"
-run -all
-#                    0    Instruction sent = ffffffff, FIFO1 instr = x   FIFO2 instr = x
-#                   10    Instruction sent = 00045678, FIFO1 instr = 1   FIFO2 instr = 0
-#                   20    Instruction sent = 0005678a, FIFO1 instr = 0   FIFO2 instr = 1
-#                   30    Instruction sent = 000678ab, FIFO1 instr = 1   FIFO2 instr = 0
-#                   40    Instruction sent = 00078abc, FIFO1 instr = 0   FIFO2 instr = 1
-#                   50    Instruction sent = 0008abcd, FIFO1 instr = 1   FIFO2 instr = 0
-#                   60    Instruction sent = 000abcde, FIFO1 instr = 0   FIFO2 instr = 1
+# run -all
+#                    0    Instruction sent = 11111111111111111111111111111111, FIFO1 instr = x   FIFO2 instr = x
+#                   10    Instruction sent = 00000000000001000101011001111000, FIFO1 instr = 1   FIFO2 instr = 0
+#                   20    Instruction sent = 00000000000001010110011110001010, FIFO1 instr = 0   FIFO2 instr = 1
+#                   30    Instruction sent = 00000000000001100111100010101011, FIFO1 instr = 1   FIFO2 instr = 0
+#                   40    Instruction sent = 00000000000001111000101010111100, FIFO1 instr = 0   FIFO2 instr = 1
+#                   50    Instruction sent = 00000000000010001010101111001101, FIFO1 instr = 1   FIFO2 instr = 0
+#                   60    Instruction sent = 00000000000010101011110011011110, FIFO1 instr = 0   FIFO2 instr = 1
 # test override
-#                   70    Instruction sent = 10000801, FIFO1 instr = 1   FIFO2 instr = 0
-#                   80    Instruction sent = 10000803, FIFO1 instr = 1   FIFO2 instr = 0
-#                   90    Instruction sent = 18000807, FIFO1 instr = 0   FIFO2 instr = 1
-#                  100    Instruction sent = 1800080f, FIFO1 instr = 0   FIFO2 instr = 1
+#                   70    Instruction sent = 00010000000000000000100000000001, FIFO1 instr = 1   FIFO2 instr = 0
+#                   80    Instruction sent = 00010000000000000000100000000011, FIFO1 instr = 1   FIFO2 instr = 0
+#                   90    Instruction sent = 00011000000000000000100000000111, FIFO1 instr = 0   FIFO2 instr = 1
+#                  100    Instruction sent = 00011000000000000000100000001111, FIFO1 instr = 0   FIFO2 instr = 1
 # reg collition testing
-# next 3 instr should all go into same fifo
-#                  110    Instruction sent = 00108815, FIFO1 instr = 0   FIFO2 instr = 1
-#                  120    Instruction sent = 2010a814, FIFO1 instr = 0   FIFO2 instr = 1
-#                  130    Instruction sent = 2010ac17, FIFO1 instr = 0   FIFO2 instr = 1
-# next instr should all go into OTHER fifo
-#                  140    Instruction sent = 2030ac01, FIFO1 instr = 1   FIFO2 instr = 0
-# End time: 00:18:58 on Feb 20,2024, Elapsed time: 0:00:37
-# Errors: 1, Warnings: 0
+# next 3 instr should all go into same fifo due to collisions
+#                  110    Instruction sent = 00000000000100001000000000000010, FIFO1 instr = 1   FIFO2 instr = 0
+#                  120    Instruction sent = 00100000000100000001000000010100, FIFO1 instr = 1   FIFO2 instr = 0
+#                  130    Instruction sent = 00100000000000000001010010010111, FIFO1 instr = 1   FIFO2 instr = 0
+#                  140    Instruction sent = 00100000001000010001100110000010, FIFO1 instr = 1   FIFO2 instr = 0
+# next instr should all go into OTHER fifo (src-src)
+#                  150    Instruction sent = 00100000001100001011110010000000, FIFO1 instr = 0   FIFO2 instr = 1
+#  quit -f
+# End time: 14:01:55 on Feb 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

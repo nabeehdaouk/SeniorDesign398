@@ -15,7 +15,7 @@ module arbiter_tb2();
 
 
     initial begin
-        $monitor($time,"    Instruction sent = %h, FIFO1 instr = %h   FIFO2 instr = %h",instr, FIFO_1_en, FIFO_2_en);
+        $monitor($time,"    Instruction sent = %b, FIFO1 instr = %h   FIFO2 instr = %h",instr, FIFO_1_en, FIFO_2_en);
         rstn = 0;
         instr = 32'hFFFF_FFFF;
         
@@ -57,18 +57,21 @@ module arbiter_tb2();
 
         #10 //Arbiter sends data to FIFO 2 with different src adrs
         $display("reg collition testing");
-        $display("next 3 instr should all go into same fifo");
-        instr = 32'b000_00_000_0_0_0_10000_10001_0_00000_10101;
+        $display("next 3 instr should all go into same fifo due to collisions");
+        instr = 32'b000_00_000_0_0_0_10000_10000_0_00000_00010;
 
-        #10 //Arbiter sends data to FIFO 2 with same dest as src adrs
-        instr = 32'b001_00_000_0_0_0_10000_10101_0_00000_10100;
+        #10 //src dest
+        instr = 32'b001_00_000_0_0_0_10000_00010_0_00000_10100;
 
-        #10 //Arbiter sends data to FIFO 2 with same dest adrs as last dest
-        instr = 32'b001_00_000_0_0_0_10000_10101_1_00000_10111;
+        #10 //dest dest
+        instr = 32'b001_00_000_0_0_0_00000_00010_1_00100_10111;
+        
+        #10 //dest src
+        instr = 32'b001_00_000_0_0_1_00001_00011_0_01100_00010;
 
-        #10 //Arbiter sends data to FIFO 1 with different destination adrs
-        $display("next instr should all go into OTHER fifo");
-        instr = 32'b001_00_000_0_0_1_10000_10101_1_00000_00001;
+        #10 //src src
+        $display("next instr should all go into OTHER fifo (src-src)");
+        instr = 32'b001_00_000_0_0_1_10000_10111_1_00100_00000;
         
 
 
