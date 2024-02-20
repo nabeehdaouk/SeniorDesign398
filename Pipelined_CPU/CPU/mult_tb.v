@@ -40,11 +40,11 @@ module mult_tb();
         w_enable = 1;
         
         w_adrs = 0;
-        w_instruction = 32'h0000000e;
+        w_instruction = 32'h0000000d;
         
         #10
         w_adrs = 1;
-        w_instruction = 32'h0000000f;
+        w_instruction = 32'h000000f;
         
         #10
         w_adrs = 2;
@@ -53,6 +53,32 @@ module mult_tb();
         #10
         w_adrs = 10'hff;
         w_instruction = 32'hffffffff; //-1
+        
+        
+         $display("------------------------------------------------------------------------------------------------------------");
+        $display("PROGRAMING MODE");
+        $display("PROGRAMING MULTIPLICATION TEST PROGRAM...");
+        $display();
+        $display("VALUES IN MEM:");
+        $display("hX000  -> A VALUE = 0000000d");
+        $display("hX001  -> B VALUE = 0000000f");
+        $display("hX002  -> C INITIAL = 00000000");
+        $display("hX00f  -> DECREMENT = ffffffff");
+        $display();
+        $display("ADRS  -> INST SRC DEST");
+        $display("hX004 -> LD MEM0 REGA_0");
+        $display("hX005 -> LD MEM1 REGA_1");
+        $display("hX006 -> LD MEM2 REGA_2");
+        $display("hX007 -> LD MEMf REGA_f");
+        $display("hX008 -> ADD REGA_0 REGA_2");
+        $display("hX009 -> NOOP");
+        $display("hX00a -> NOOP");
+        $display("hX00b -> ADD REGA_f REGA_1");
+        $display("hX00c -> NOOP");
+        $display("hX00d -> NOOP");
+        $display("hX00e -> BRA ZERO ADRS010");
+        $display("hX00f -> BRA POS ADRS008");
+        $display("hX010 -> STR REGA_2 MEM2");
 
 
         #10
@@ -83,9 +109,10 @@ module mult_tb();
         w_adrs = 10;
         w_instruction = NOP; 
         
+        
         #10
         w_adrs = 11;
-        w_instruction = NOP; 
+        w_instruction = 32'b100_00_000_0_0_0_00000_00001_0_00000_01111; //Add REG_A_f REG_A_1
         
         #10
         w_adrs = 12;
@@ -93,41 +120,35 @@ module mult_tb();
         
         #10
         w_adrs = 13;
-        w_instruction = 32'b100_00_000_0_0_0_00000_00001_0_00000_01111; //Add REG_A_f REG_A_1
+        w_instruction = NOP; 
         
         #10
         w_adrs = 14;
-        w_instruction = NOP; 
+        w_instruction = 32'b101_00_100_0_0_0_00000_10000_0_00000_00000; //BRANCH EQZ MEM_19
         
         #10
         w_adrs = 15;
-        w_instruction = NOP; 
-        
-        #10
-        w_adrs = 16;
-        w_instruction = NOP; 
-        
-        #10
-        w_adrs = 17;
-        w_instruction = 32'b101_00_100_0_0_0_00000_10011_0_00000_00000; //BRANCH EQZ MEM_19
-        
-        #10
-        w_adrs = 18;
         w_instruction = 32'b101_00_000_0_0_0_00000_01000_0_00000_00000; //BRANCH POS MEM_8 
         
         #10
-        w_adrs = 19;
+        w_adrs = 16;
         w_instruction = 32'b110_00_000_0_1_0_00000_00010_0_00000_00010; //STORE REG_A_2 MEM2
         
         
        
         
         //Start
+                $display("RUNNING MULTIPLICATION TEST PROGRAM...");
+        $display("*****************************");
+        $display("CHECKING MEMORY VALUE AT LOCATION hX002");
+        $display("MULTIPLIED 13 * 15, EXP RES: 195");
+        $display("*****************************");
         #10
         cpu_en = 1;
         w_enable = 0;
-
+        
         #3000
+
         $stop();    
     
     end
