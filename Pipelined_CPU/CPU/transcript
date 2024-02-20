@@ -1,0 +1,579 @@
+# Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# vsim -gui work.mult_tb 
+# Start time: 00:19:19 on Feb 20,2024
+# Loading work.mult_tb
+# Loading work.top_level
+# Loading work.cpu
+# Loading work.psr
+# Loading work.pc
+# Loading work.memory
+run
+restart
+add wave -position end sim:/mult_tb/top_level_instance/cpu_instance/*
+# Can't move the Now cursor.
+run -all
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 640 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+add wave -position end sim:/mult_tb/top_level_instance/cpu_instance/file_reg_A
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+run
+run
+run
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 640 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 640 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+add wave -position end sim:/mult_tb/top_level_instance/memory_instance/*
+add wave -position end sim:/mult_tb/top_level_instance/memory_instance/mem
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+rin -all
+# can't read "var": no such variable
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# Loading work.mult_tb
+run 1000
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 640 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 640 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 630 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 620 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 620 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 620 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(101)
+#    Time: 620 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 101
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(127)
+#    Time: 680 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 127
+restert
+# invalid command name "restert"
+
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(127)
+#    Time: 680 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 127
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 690 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart
+# Loading work.mult_tb
+# Loading work.top_level
+# Loading work.cpu
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 690 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+run 500
+run 5000
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 710 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 710 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run all
+# Invalid time value: all
+reatart
+# invalid command name "reatart"
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 690 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 690 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 700 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 700 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 700 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 700 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+run 2000
+run 1000
+restart
+# Loading work.mult_tb
+# Loading work.top_level
+# Loading work.cpu
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 700 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 700 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 690 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 700 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 3200 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(131)
+#    Time: 3210 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 131

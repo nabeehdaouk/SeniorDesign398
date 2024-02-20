@@ -61,14 +61,16 @@ module arbiter_tb2();
         instr = 32'b000_00_000_0_0_0_10000_10001_0_00000_10101;
 
         #10 //Arbiter sends data to FIFO 2 with same dest as src adrs
-        instr = 32'b001_00_000_0_0_0_10000_10101_0_00000_10101;
+        instr = 32'b001_00_000_0_0_0_10000_10101_0_00000_10100;
 
         #10 //Arbiter sends data to FIFO 2 with same dest adrs as last dest
-        instr = 32'b001_00_000_0_0_0_10000_10101_1_00000_10101;
+        instr = 32'b001_00_000_0_0_0_10000_10101_1_00000_10111;
 
         #10 //Arbiter sends data to FIFO 1 with different destination adrs
-        $display("next 3 instr should all go into OTHER fifo");
+        $display("next instr should all go into OTHER fifo");
         instr = 32'b001_00_000_0_0_1_10000_10101_1_00000_00001;
+        
+
 
        // #10 //Arbiter sends data to FIFO 1 with same destination adrs
         //instr = ;

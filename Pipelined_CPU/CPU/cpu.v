@@ -203,11 +203,11 @@ module cpu(
                 end
                 
                 NOOP: begin
-                    execute_result <= 0;
-                    execute_carry <= 1'b0; //set carry to 0
-                    branch_address <= 0;
-                    branch_valid <= 0;
-                    read_mem_str <= 0;
+//                    execute_result <= 0;
+//                    execute_carry <= 1'b0; //set carry to 0
+//                    branch_address <= 0;
+//                    branch_valid <= 0;
+//                    read_mem_str <= 0;
                 end 
                 
                 LOAD : begin
@@ -295,7 +295,7 @@ module cpu(
             result <= mem_store_data;
             carry <= mem_carry;
         end
-        else if(write_back[31:29] != STORE) begin
+        else if((write_back[31:29] != STORE) & (write_back[31:29] != NOOP)) begin
              if(write_back[21]) begin
                 file_reg_B[write_back[20:16]] <= wb_result;  
             end
