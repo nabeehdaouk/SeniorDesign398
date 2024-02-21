@@ -1,5 +1,5 @@
 # vsim -c work.mult_tb -do "run -all; quit -f" 
-# Start time: 01:57:14 on Feb 20,2024
+# Start time: 18:32:52 on Feb 20,2024
 # Loading work.mult_tb
 # Loading work.top_level
 # Loading work.cpu
@@ -45,5 +45,5 @@
 # Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 152
 # Stopped at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 152
 #  quit -f
-# End time: 01:57:15 on Feb 20,2024, Elapsed time: 0:00:01
+# End time: 18:32:53 on Feb 20,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

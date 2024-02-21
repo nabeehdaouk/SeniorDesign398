@@ -67,7 +67,7 @@ module arbiter_tb2();
         instr = 32'b001_00_000_0_0_0_00000_00010_1_00100_10111;
         
         #10 //dest src
-        instr = 32'b001_00_000_0_0_1_00001_00011_0_01100_00010;
+        instr = 32'b001_00_000_0_0_1_00001_00011_0_01100_10000;
 
         #10 //src src
         $display("next instr should all go into OTHER fifo (src-src)");

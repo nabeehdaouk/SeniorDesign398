@@ -27,16 +27,16 @@ module arbiter(
 
     always @(instr) begin
         if (!resetn) begin
-            fifo_sel = 1'b0;
-            src_dest_1= 32'b0;
-            dest_src_1= 32'b0;
-            dest_dest_1= 32'b0;
-            src_dest_2= 32'b0;
-            dest_src_2= 32'b0;
-            dest_dest_2= 32'b0;
+            fifo_sel <= 1'b0;
+            src_dest_1<= 32'b0;
+            dest_src_1<= 32'b0;
+            dest_dest_1<= 32'b0;
+            src_dest_2<= 32'b0;
+            dest_src_2<= 32'b0;
+            dest_dest_2<= 32'b0;
             for (int ii = 0; ii < 8; ii = ii + 1) begin
-                fifo_1_que[ii] = 32'b0;
-                fifo_2_que[ii] = 32'b0;
+                fifo_1_que[ii] <= 32'b0;
+                fifo_2_que[ii] <= 32'b0;
             end
         end
         else begin
@@ -44,17 +44,17 @@ module arbiter(
                 begin
                     if (instr[27] ==1'b0)
                     begin
-                        fifo_1_que= {fifo_1_que[6:0], instr};
-                        FIFO_1_en= 1'b1;
-                        FIFO_2_en= 1'b0;
-                        fifo_sel = 1'b1;
+                        fifo_1_que<= {fifo_1_que[6:0], instr};
+                        FIFO_1_en<= 1'b1;
+                        FIFO_2_en<= 1'b0;
+                        fifo_sel <= 1'b1;
                     end
                     if (instr[27] ==1'b1)
                     begin
-                        fifo_2_que= {fifo_2_que[6:0], instr};
-                        FIFO_1_en= 1'b0;
-                        FIFO_2_en= 1'b1;
-                        fifo_sel = 1'b0;
+                        fifo_2_que<= {fifo_2_que[6:0], instr};
+                        FIFO_1_en<= 1'b0;
+                        FIFO_2_en<= 1'b1;
+                        fifo_sel <= 1'b0;
                     end
                 end
             else
@@ -71,23 +71,23 @@ module arbiter(
                                     end
                                     if ((|src_dest_1) || (|dest_src_1) || (|dest_dest_1))
                                         begin
-                                            fifo_2_que= {fifo_2_que[6:0], instr};
-                                            FIFO_1_en= 1'b0;
-                                            FIFO_2_en= 1'b1;
-                                            fifo_sel = 1'b0;
+                                            fifo_2_que<= {fifo_2_que[6:0], instr};
+                                            FIFO_1_en<= 1'b0;
+                                            FIFO_2_en<= 1'b1;
+                                            fifo_sel <= 1'b0;
                                         end
                                     else begin
-                                        fifo_1_que= {fifo_1_que[6:0], instr};
-                                        FIFO_1_en= 1'b1;
-                                        FIFO_2_en= 1'b0;
-                                        fifo_sel = 1'b1;
+                                        fifo_1_que<= {fifo_1_que[6:0], instr};
+                                        FIFO_1_en<= 1'b1;
+                                        FIFO_2_en<= 1'b0;
+                                        fifo_sel <= 1'b1;
                                     end
                                 end
                             else begin
-                                fifo_1_que= {fifo_1_que[6:0], instr};
-                                FIFO_1_en= 1'b1;
-                                FIFO_2_en= 1'b0;
-                                fifo_sel = 1'b1;
+                                fifo_1_que<= {fifo_1_que[6:0], instr};
+                                FIFO_1_en<= 1'b1;
+                                FIFO_2_en<= 1'b0;
+                                fifo_sel <= 1'b1;
                             end
                         end
 
@@ -102,31 +102,31 @@ module arbiter(
                                     end
                                     if ((|src_dest_2) || (|dest_src_2) || (|dest_dest_2))
                                         begin
-                                            fifo_1_que= {fifo_1_que[6:0], instr};
-                                            FIFO_1_en= 1'b1;
-                                            FIFO_2_en= 1'b0;
-                                            fifo_sel = 1'b1;
+                                            fifo_1_que<= {fifo_1_que[6:0], instr};
+                                            FIFO_1_en<= 1'b1;
+                                            FIFO_2_en<= 1'b0;
+                                            fifo_sel <= 1'b1;
                                         end
                                     else begin
-                                        fifo_2_que= {fifo_2_que[6:0], instr};
-                                        FIFO_1_en= 1'b0;
-                                        FIFO_2_en= 1'b1;
-                                        fifo_sel = 1'b0;
+                                        fifo_2_que<= {fifo_2_que[6:0], instr};
+                                        FIFO_1_en<= 1'b0;
+                                        FIFO_2_en<= 1'b1;
+                                        fifo_sel <= 1'b0;
                                     end
                                 end
                             else
                                 begin
-                                    fifo_2_que= {fifo_2_que[6:0], instr};
-                                    FIFO_1_en= 1'b0;
-                                    FIFO_2_en= 1'b1;
-                                    fifo_sel = 1'b0;
+                                    fifo_2_que<= {fifo_2_que[6:0], instr};
+                                    FIFO_1_en<= 1'b0;
+                                    FIFO_2_en<= 1'b1;
+                                    fifo_sel <= 1'b0;
                                 end
                         end
                         default begin
-                            fifo_1_que= {fifo_1_que[6:0], instr};
-                            FIFO_1_en= 1'b1;
-                            FIFO_2_en= 1'b0;
-                            fifo_sel = 1'b1;
+                            fifo_1_que<= {fifo_1_que[6:0], instr};
+                            FIFO_1_en<= 1'b1;
+                            FIFO_2_en<= 1'b0;
+                            fifo_sel <= 1'b1;
                         end
                     endcase
                 end

@@ -1,5 +1,5 @@
 # vsim -c work.arbiter_tb2 -do "run -all; quit -f" 
-# Start time: 14:01:54 on Feb 20,2024
+# Start time: 18:57:22 on Feb 20,2024
 # Loading work.arbiter_tb2
 # Loading sv_std.std
 # Loading work.arbiter
@@ -21,9 +21,9 @@
 #                  110    Instruction sent = 00000000000100001000000000000010, FIFO1 instr = 1   FIFO2 instr = 0
 #                  120    Instruction sent = 00100000000100000001000000010100, FIFO1 instr = 1   FIFO2 instr = 0
 #                  130    Instruction sent = 00100000000000000001010010010111, FIFO1 instr = 1   FIFO2 instr = 0
-#                  140    Instruction sent = 00100000001000010001100110000010, FIFO1 instr = 1   FIFO2 instr = 0
+#                  140    Instruction sent = 00100000001000010001100110010000, FIFO1 instr = 1   FIFO2 instr = 0
 # next instr should all go into OTHER fifo (src-src)
 #                  150    Instruction sent = 00100000001100001011110010000000, FIFO1 instr = 0   FIFO2 instr = 1
 #  quit -f
-# End time: 14:01:55 on Feb 20,2024, Elapsed time: 0:00:01
+# End time: 18:57:23 on Feb 20,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
