@@ -21,6 +21,12 @@ module top_level(
     wire write_mem;
     wire [31:0] mem_data_in;
     wire mem_w_en;
+    wire [4:0] read_addr_A, read_addr_B;
+    wire [4:0] write_addr_A, write_addr_B;
+    wire [31:0] write_data_A, write_data_B;
+    wire [31:0] read_data_A, read_data_B;
+    wire [4:0] read_addr_A_M, read_addr_B_M;
+    wire [31:0] read_data_A_M, read_data_B_M;
     
     
     wire gated_cpu_clk;
@@ -31,21 +37,64 @@ module top_level(
     assign mem_w_adrs = cpu_en ? mem_wadrs : w_adrs;
     assign mem_w_en = cpu_en ? write_mem : w_enable;
  
-    cpu cpu_instance(
-        .clk(gated_cpu_clk),
-        .resetn(resetn),
-        .instruction_fetch(instruction_fetch),
-        .mem_store_data(mem_store_data),
-        .read_mem_ir(read_mem_ir),
-        .read_mem_str(read_mem_str),
-        .write_mem(write_mem),
-        .carry(carry),
-        .result(result),
-        .mem_wdata(mem_wdata),
-        .mem_wadrs(mem_wadrs),
-        .mem_radrs_ld(mem_radrs_ld),
-        .mem_radrs_ir(mem_radrs_ir)
-    );
+//    cpu cpu_instance(
+//        .clk(gated_cpu_clk),
+//        .resetn(resetn),
+//        .instruction_fetch(instruction_fetch),
+//        .mem_store_data(mem_store_data),
+//        .read_mem_ir(read_mem_ir),
+//        .read_mem_str(read_mem_str),
+//        .write_mem(write_mem),
+//        .carry(carry),
+//        .result(result),
+//        .mem_wdata(mem_wdata),
+//        .mem_wadrs(mem_wadrs),
+//        .mem_radrs_ld(mem_radrs_ld),
+//        .mem_radrs_ir(mem_radrs_ir)
+//    );
+    
+   cpu2 cpu2_instance(
+       .clk(gated_cpu_clk),
+       .resetn(resetn),
+       .instruction_fetch(instruction_fetch),
+       .mem_store_data(mem_store_data),
+       .read_mem_str(read_mem_str),
+       .write_mem(write_mem),
+       .carry(carry),
+       .result(result),
+       .mem_wdata(mem_wdata),
+       .mem_wadrs(mem_wadrs),
+       .mem_radrs_ld(mem_radrs_ld),
+       .read_mem_ir(read_mem_ir),
+       .mem_radrs_ir(mem_radrs_ir),
+       .read_addr_A(read_addr_A),
+       .read_addr_B(read_addr_B),
+       .read_addr_A_M(read_addr_A_M),
+       .read_addr_B_M(read_addr_B_M),
+       .write_addr_A(write_addr_A),
+       .write_addr_B(write_addr_B),
+       .write_data_A(write_data_A),
+       .write_data_B(write_data_B),
+       .read_data_A(read_data_A),
+       .read_data_B(read_data_B),
+       .read_data_A_M(read_data_A_M),
+       .read_data_B_M(read_data_B_M)
+   );
+   
+   FileMem FileMem_instance(
+       .read_addr_A(read_addr_A),
+       .read_addr_B(read_addr_B),
+       .read_addr_A_M(read_addr_A_M),
+       .read_addr_B_M(read_addr_B_M),
+       .write_addr_A(write_addr_A),
+       .write_addr_B(write_addr_B),
+       .write_data_A(write_data_A),
+       .write_data_B(write_data_B),
+       .read_data_A(read_data_A),
+       .read_data_B(read_data_B),
+       .read_data_A_M(read_data_A_M),
+       .read_data_B_M(read_data_B_M)
+   );
     
      memory memory_instance(
          .clk(clk),

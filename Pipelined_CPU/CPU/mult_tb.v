@@ -99,7 +99,7 @@ module mult_tb();
         
         #10
         w_adrs = 8;
-        w_instruction = 32'b100_00_000_0_0_0_00000_00010_0_00000_00000; //Add REG_A_0 REG_A_2
+        w_instruction = NOP; 
         
         #10
         w_adrs = 9;
@@ -107,12 +107,11 @@ module mult_tb();
         
         #10
         w_adrs = 10;
-        w_instruction = NOP; 
-        
+        w_instruction = 32'b100_00_000_0_0_0_00000_00010_0_00000_00000; //Add REG_A_0 REG_A_2
         
         #10
         w_adrs = 11;
-        w_instruction = 32'b100_00_000_0_0_0_00000_00001_0_00000_01111; //Add REG_A_f REG_A_1
+        w_instruction = NOP; 
         
         #10
         w_adrs = 12;
@@ -122,16 +121,33 @@ module mult_tb();
         w_adrs = 13;
         w_instruction = NOP; 
         
+        
         #10
         w_adrs = 14;
-        w_instruction = 32'b101_00_100_0_0_0_00000_10000_0_00000_00000; //BRANCH EQZ MEM_19
+        w_instruction = 32'b100_00_000_0_0_0_00000_00001_0_00000_01111; //Add REG_A_f REG_A_1
         
         #10
         w_adrs = 15;
-        w_instruction = 32'b101_00_000_0_0_0_00000_01000_0_00000_00000; //BRANCH POS MEM_8 
+        w_instruction = NOP; 
         
         #10
         w_adrs = 16;
+        w_instruction = NOP; 
+        
+        #10
+        w_adrs = 17;
+        w_instruction = NOP; 
+        
+        #10
+        w_adrs = 18;
+        w_instruction = 32'b101_00_100_0_0_0_00000_10100_0_00000_00000; //BRANCH EQZ MEM_20
+        
+        #10
+        w_adrs = 19;
+        w_instruction = 32'b101_00_000_0_0_0_00000_01000_0_00000_00000; //BRANCH POS MEM_8 
+        
+        #10
+        w_adrs = 20;
         w_instruction = 32'b110_00_000_0_1_0_00000_00010_0_00000_00010; //STORE REG_A_2 MEM2
         
         
