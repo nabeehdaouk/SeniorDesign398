@@ -25,6 +25,14 @@ module FileMem(
 reg [31:0] file_reg_A [31:0];
 reg [31:0] file_reg_B [31:0];
 
+integer i;
+initial begin
+    for(i = 0; i < 32; i = i + 1) begin
+    file_reg_A[i]<=0; 
+    file_reg_B[i]<=0;
+end
+end
+
 // Read operations (combinatorial logic)
 assign read_data_A1 = file_reg_A[read_addr_A1];
 assign read_data_B1 = file_reg_B[read_addr_B1];

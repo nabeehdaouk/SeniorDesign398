@@ -51,11 +51,11 @@ module mult_tb();
         w_enable = 1;
         
         w_adrs = 0;
-        w_instruction = 32'h0000000b;
+        w_instruction = 32'h0000000d;
         
         #10
         w_adrs = 1;
-        w_instruction = 32'h000000c;
+        w_instruction = 32'h000000b;
         
         #10
         w_adrs = 2;
@@ -151,33 +151,37 @@ module mult_tb();
         
         #10
         w_adrs = 18;
-        w_instruction = 32'b101_10_100_0_0_0_00000_10101_0_00000_00000; //BRANCH EQZ MEM_20
-        //w_instruction = NOP; 
+        w_instruction = 32'b101_10_100_0_0_0_00000_10110_0_00000_00000; //BRANCH EQZ MEM_20
         
         #10
         w_adrs = 19;
-        w_instruction = 32'b101_10_000_0_0_0_00000_01000_0_00000_00000; //BRANCH POS MEM_8 
+        w_instruction = 32'b101_10_100_0_0_0_00000_10110_0_00000_00000; //BRANCH EQZ MEM_20
+        //w_instruction = NOP; 
         
         #10
         w_adrs = 20;
+        w_instruction = 32'b101_10_000_0_0_0_00000_01000_0_00000_00000; //BRANCH POS MEM_8 
+        
+        #10
+        w_adrs = 21;
         //w_instruction = 32'b110_10_000_0_1_0_00000_00010_0_00000_00010; //STORE REG_A_2 MEM2
         
         
        #10
-        w_adrs = 21;
+        w_adrs = 22;
         w_instruction = 32'b110_10_000_0_1_0_00000_00010_0_00000_00010; //STORE REG_A_2 MEM2
         
         //Start
                 $display("RUNNING MULTIPLICATION TEST PROGRAM...");
         $display("*****************************");
         $display("CHECKING MEMORY VALUE AT LOCATION hX002");
-        $display("MULTIPLIED 11 * 12, EXP RES: 132");
+        $display("MULTIPLIED 11 * 13, EXP RES: 143");
         $display("*****************************");
         #10
         cpu_en = 1;
         w_enable = 0;
         
-        #3000
+        #5000
 
         $stop();    
     
