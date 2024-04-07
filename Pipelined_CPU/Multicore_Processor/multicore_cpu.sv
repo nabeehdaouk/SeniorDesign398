@@ -4,10 +4,20 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     input [10:0] picture_radrs,
     output logic carry, carry2,
     output logic [23:0] picture_data,
-    output logic [31:0] result,result2
+    output logic [31:0] result,result2,
+    input cpu_en,
+    input [31:0] w_instruction,
+    input [10:0] w_adrs,
+    input w_enable
 );
 
+    wire gated_cpu_clk;
+    wire [10:0] mem_w_adrs;
+    wire [31:0] mem_data_in;
+    wire mem_w_en;
 
+
+    
     //Wires for data path #1
     logic [10:0] mem_instruction_radrs;     //Output by PC, to Memory - States instruction read address
     
@@ -43,7 +53,7 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     logic memory_read_load_valid;           //Output by Memory to SYNCH - read valid 2 output
     logic memory_write_store_valid;         //Oupput by Memory to SYNCH - write valid 1 output
     logic [31:0] memory_store_data_in;      //Output by Memory to SYNCH - write store data
-    logic [11:0] memory_wadrs_store;        //Output by Memory to SYNCH - wadrs to store data
+    logic [10:0] memory_wadrs_store;        //Output by Memory to SYNCH - wadrs to store data
       
     logic arb_w_en_one;                     //Arbiter write outputs
     logic fifo_w_en_one;                    //FIFO write enable one
@@ -53,10 +63,18 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     logic [10:0] pc_branch_address;
     logic [31:0] arb_instr_out;
     
+    
+    
+    assign gated_cpu_clk= cpu_en ? core_clk : 1'b0;
+    assign gated_sys_clk= cpu_en ? sys_clk : 1'b0;
+    assign mem_data_in = cpu_en ? memory_store_data_in : w_instruction;
+    assign mem_w_adrs = cpu_en ? memory_wadrs_store : w_adrs;
+    assign mem_w_en = cpu_en ? memory_write_store : w_enable;
+    
     //Modules for core path 1    
     //cpu core #1
     cpu cpu_instance(
-        .clk(core_clk),
+        .clk(gated_cpu_clk),
         .resetn(resetn),
         .instruction_fetch(instruction_fetch),
         .read_load_valid(read_load_valid),
@@ -215,7 +233,7 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     //Modules for core path 2
     //cpu core 2
     cpu cpu_instance2(
-        .clk(core_clk),
+        .clk(gated_cpu_clk),
         .resetn(resetn),
         .instruction_fetch(instruction_fetch2),
         .read_load_valid(read_load_valid2),
@@ -338,7 +356,7 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     
     //Shared modules    
     pc pc_instance(
-        .clk(sys_clk),
+        .clk(gated_sys_clk),
         .resetn(resetn),
         .branch_valid(branch_valid),     
         .branch_address(branch_address), 
@@ -351,15 +369,15 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
         .clk(sys_clk),
         .picture_clk(picture_clk),
         .resetn(resetn),
-        .w_adrs(memory_wadrs_store),
+        .w_adrs(mem_w_adrs),//
         .w_adrs2(memory_wadrs_store2),
         .r_adrs1(mem_instruction_radrs),
         .r_adrs2(memory_radrs_load),
         .r_adrs3(memory_radrs_load2),
         .picture_radrs(picture_radrs),
-        .data_in(memory_store_data_in),
+        .data_in(mem_data_in),//
         .data_in2(memory_store_data_in2),
-        .w_en(memory_write_store),
+        .w_en(mem_w_en),
         .w_en2(memory_write_store2),
         .r_en1(memory_insturction_r_en),
         .r_en2(memory_read_load),

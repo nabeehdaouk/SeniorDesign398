@@ -29,6 +29,11 @@ module memory(
     reg [31:0] mem [2047:0];
     integer i;
     
+    always @(mem[2]) //For mult TB
+begin
+    if (mem[2] != 0)
+    $monitor("Solution= %d \nSolution= %h \nSolution= %b \n" ,mem[2], mem[2], mem[2]);
+end
     
     always @(posedge clk) begin: Read_Write_Memory
 
