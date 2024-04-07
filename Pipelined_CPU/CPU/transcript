@@ -1,6 +1,5 @@
-# Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
-# vsim -gui work.mult_tb 
-# Start time: 04:27:11 on Mar 26,2024
+# vsim -c work.mult_tb -do "run -all; quit -f" 
+# Start time: 05:13:22 on Apr 07,2024
 # Loading work.mult_tb
 # Loading work.top_level
 # Loading work.cpu2
@@ -8,99 +7,7 @@
 # Loading work.pc
 # Loading work.FileMem
 # Loading work.memory
-add wave -position end sim:/mult_tb/top_level_instance/cpu2_instance/*
-add wave -position end sim:/mult_tb/top_level_instance/FileMem_instance/*
-add wave -position end sim:/mult_tb/top_level_instance/FileMem_instance/fiule_reg_A
-# (vish-4014) No objects found matching '/mult_tb/top_level_instance/FileMem_instance/fiule_reg_A'.
-add wave -position end sim:/mult_tb/top_level_instance/FileMem_instance/file_reg_A
-restart
-run -all
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 13 * 15, EXP RES: 195
-# *****************************
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(152)
-#    Time: 3180 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 152
-restart
-# Loading work.mult_tb
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 13 * 15, EXP RES: 195
-# *****************************
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(168)
-#    Time: 3220 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 168
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-# Loading work.mult_tb
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
+# run -all
 # ------------------------------------------------------------------------------------------------------------
 # PROGRAMING MODE
 # PROGRAMING MULTIPLICATION TEST PROGRAM...
@@ -134,6 +41,10 @@ run -all
 # Solution= 000000c3 
 # Solution= 00000000000000000000000011000011 
 # 
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(168)
-#    Time: 3220 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 168
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(178)
+#    Time: 3240 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 178
+# Stopped at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 178
+#  quit -f
+# End time: 05:13:22 on Apr 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

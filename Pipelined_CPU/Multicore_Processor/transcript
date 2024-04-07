@@ -1,6 +1,6 @@
 # Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # vsim -gui work.mult_tb 
-# Start time: 04:03:53 on Apr 07,2024
+# Start time: 04:50:34 on Apr 07,2024
 # Loading work.mult_tb
 # Loading sv_std.std
 # Loading work.multicore_cpu
@@ -12,7 +12,6 @@
 # Loading work.ff_synchronizer
 # Loading work.g2b
 # Loading work.fifo_memory
-# Loading work.cpu
 # Loading work.pc
 # Loading work.memory
 # Loading work.arbiter
@@ -20,45 +19,6 @@
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
 # ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-add wave -position end sim:/mult_tb/multicore_cpu_instance/cpu_instance/*
 add wave -position end sim:/mult_tb/multicore_cpu_instance/FileMem_instance/*
 add wave -position end sim:/mult_tb/multicore_cpu_instance/FileMem_instance/file_reg_A
 restart
@@ -66,48 +26,7 @@ restart
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
 # ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
 # ------------------------------------------------------------------------------------------------------------
 # PROGRAMING MODE
 # PROGRAMING MULTIPLICATION TEST PROGRAM...
@@ -135,72 +54,18 @@ run -all
 # RUNNING MULTIPLICATION TEST PROGRAM...
 # *****************************
 # CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
+# MULTIPLIED 11 * 13, EXP RES: 143
 # *****************************
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(182)
-#    Time: 3230 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 182
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
+#    Time: 5240 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
 # WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
 restart
 # Loading work.mult_tb
-# Loading work.multicore_cpu
-# Loading work.cpu2
 # ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
 # ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
 run -all
 # GetModuleFileName: The specified module could not be found.
 # 
@@ -232,617 +97,7 @@ run -all
 # RUNNING MULTIPLICATION TEST PROGRAM...
 # *****************************
 # CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(182)
-#    Time: 3230 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 182
-run -all
-restart
-# Loading work.mult_tb
-# Loading work.multicore_cpu
-# Loading work.cpu2
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(182)
-#    Time: 3230 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 182
-run 1000
-restart
-# Loading work.mult_tb
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# Solution=         22 
-# Solution= 00000016 
-# Solution= 00000000000000000000000000010110 
-# 
-# Solution=         33 
-# Solution= 00000021 
-# Solution= 00000000000000000000000000100001 
-# 
-# Solution=         44 
-# Solution= 0000002c 
-# Solution= 00000000000000000000000000101100 
-# 
-# Solution=         55 
-# Solution= 00000037 
-# Solution= 00000000000000000000000000110111 
-# 
-# Solution=         66 
-# Solution= 00000042 
-# Solution= 00000000000000000000000001000010 
-# 
-# Solution=         77 
-# Solution= 0000004d 
-# Solution= 00000000000000000000000001001101 
-# 
-# Solution=         88 
-# Solution= 00000058 
-# Solution= 00000000000000000000000001011000 
-# 
-# Solution=         99 
-# Solution= 00000063 
-# Solution= 00000000000000000000000001100011 
-# 
-# Solution=        110 
-# Solution= 0000006e 
-# Solution= 00000000000000000000000001101110 
-# 
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(183)
-#    Time: 3230 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 183
-restart
-# Loading work.mult_tb
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(182)
-#    Time: 3230 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 182
-run 500
-restart
-# Loading work.mult_tb
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
-#    Time: 3240 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
-run 500
-# Solution=        143 
-# Solution= 0000008f 
-# Solution= 00000000000000000000000010001111 
-# 
-restart
-# Loading work.mult_tb
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# Solution=         60 
-# Solution= 0000003c 
-# Solution= 00000000000000000000000000111100 
-# 
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
-#    Time: 3240 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
-restart
-# Loading work.mult_tb
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
-#    Time: 3240 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
-restart
-# Loading work.mult_tb
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
+# MULTIPLIED 11 * 13, EXP RES: 143
 # *****************************
 # ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
 #    Time: 5240 ps  Iteration: 0  Instance: /mult_tb
@@ -853,44 +108,6 @@ restart
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
 # ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
 run -all
 # GetModuleFileName: The specified module could not be found.
 # 
@@ -922,259 +139,7 @@ run -all
 # RUNNING MULTIPLICATION TEST PROGRAM...
 # *****************************
 # CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# Solution=         60 
-# Solution= 0000003c 
-# Solution= 00000000000000000000000000111100 
-# 
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
-#    Time: 5240 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
-restart
-# Loading work.mult_tb
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# Solution=        120 
-# Solution= 00000078 
-# Solution= 00000000000000000000000001111000 
-# 
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
-#    Time: 5240 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
-restart
-# Loading work.mult_tb
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
-# *****************************
-# Solution=        132 
-# Solution= 00000084 
-# Solution= 00000000000000000000000010000100 
-# 
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
-#    Time: 5240 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
-restart
-# Loading work.mult_tb
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
-#  
-# VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
-# hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
-#  
-# ADRS  -> INST SRC DEST
-# hX004 -> LD MEM0 REGA_0
-# hX005 -> LD MEM1 REGA_1
-# hX006 -> LD MEM2 REGA_2
-# hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
-# hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
-# hX00c -> NOOP
-# hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
-# *****************************
-# CHECKING MEMORY VALUE AT LOCATION hX002
-# MULTIPLIED 11 * 12, EXP RES: 132
+# MULTIPLIED 11 * 13, EXP RES: 143
 # *****************************
 # Solution=        143 
 # Solution= 0000008f 
@@ -1189,44 +154,174 @@ restart
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
 # ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
 #    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'read_addr_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (5) does not match connection size (1) for port 'write_addr_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(13).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_A_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(117): [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data_B_M2'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/FileMem_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/FileMem.v
-# ** Warning: (vsim-3017) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Too few port connections. Expected 29, found 17.
-#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance/cpu_instance2 File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/CPU/cpu2.v
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_addr_B_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_addr_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'write_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_A_M'.
-# ** Warning: (vsim-3722) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(285): [TFMPC] - Missing connection for port 'read_data_B_M'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMING MODE
+# PROGRAMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000d
+# hX001  -> B VALUE = 0000000f
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> ADD REGA_0 REGA_2
+# hX009 -> NOOP
+# hX00a -> NOOP
+# hX00b -> ADD REGA_f REGA_1
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> BRA ZERO ADRS010
+# hX00f -> BRA POS ADRS008
+# hX010 -> STR REGA_2 MEM2
+# RUNNING MULTIPLICATION TEST PROGRAM...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 11 * 13, EXP RES: 143
+# *****************************
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
+#    Time: 5240 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
+add wave -position 0 sim:/mult_tb/multicore_cpu_instance/cpu_instance/*
+restart
+# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
+# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMING MODE
+# PROGRAMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000d
+# hX001  -> B VALUE = 0000000f
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> ADD REGA_0 REGA_2
+# hX009 -> NOOP
+# hX00a -> NOOP
+# hX00b -> ADD REGA_f REGA_1
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> BRA ZERO ADRS010
+# hX00f -> BRA POS ADRS008
+# hX010 -> STR REGA_2 MEM2
+# RUNNING MULTIPLICATION TEST PROGRAM...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 11 * 13, EXP RES: 143
+# *****************************
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
+#    Time: 5240 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
+add wave -position end sim:/mult_tb/multicore_cpu_instance/cpu_instance2/*
+restart
+# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
+# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMING MODE
+# PROGRAMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000d
+# hX001  -> B VALUE = 0000000f
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> ADD REGA_0 REGA_2
+# hX009 -> NOOP
+# hX00a -> NOOP
+# hX00b -> ADD REGA_f REGA_1
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> BRA ZERO ADRS010
+# hX00f -> BRA POS ADRS008
+# hX010 -> STR REGA_2 MEM2
+# RUNNING MULTIPLICATION TEST PROGRAM...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 11 * 13, EXP RES: 143
+# *****************************
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
+#    Time: 5240 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
+add wave -position 129 sim:/mult_tb/multicore_cpu_instance/asynchronous_fifo_instance2/*
+restart
+# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
+# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMING MODE
+# PROGRAMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000d
+# hX001  -> B VALUE = 0000000f
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> ADD REGA_0 REGA_2
+# hX009 -> NOOP
+# hX00a -> NOOP
+# hX00b -> ADD REGA_f REGA_1
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> BRA ZERO ADRS010
+# hX00f -> BRA POS ADRS008
+# hX010 -> STR REGA_2 MEM2
+# RUNNING MULTIPLICATION TEST PROGRAM...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 11 * 13, EXP RES: 143
+# *****************************
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(186)
+#    Time: 5240 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v line 186
+restart
+# Loading work.mult_tb
+# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (11) does not match connection size (1) for port 'picture_radrs'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
+# ** Warning: (vsim-3015) C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/mult_tb.v(17): [PCDPC] - Port size (24) does not match connection size (1) for port 'picture_data'. The port definition is at: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /mult_tb/multicore_cpu_instance File: C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/Multicore_Processor/multicore_cpu.sv
 run -all
 # GetModuleFileName: The specified module could not be found.
 # 

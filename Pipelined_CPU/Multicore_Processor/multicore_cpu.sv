@@ -23,6 +23,12 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     wire [4:0] read_addr_A_M1, read_addr_B_M1;
     wire [31:0] read_data_A_M1, read_data_B_M1;
 
+    wire [4:0] read_addr_A2, read_addr_B2;
+    wire [4:0] write_addr_A2, write_addr_B2;
+    wire [31:0] write_data_A2, write_data_B2;
+    wire [31:0] read_data_A2, read_data_B2;
+    wire [4:0] read_addr_A_M2, read_addr_B_M2;
+    wire [31:0] read_data_A_M2, read_data_B_M2;
 
     
     //Wires for data path #1
@@ -282,7 +288,7 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     
     //Modules for core path 2
     //cpu core 2
-    cpu cpu_instance2(
+    cpu2 cpu_instance2(
         .clk(gated_cpu_clk),
         .resetn(resetn),
         .instruction_fetch(instruction_fetch2),
@@ -299,7 +305,19 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
         .mem_wdata(mem_wdata_store2),
         .mem_wadrs(mem_wadrs_store2),
         .mem_radrs_ld(mem_radrs_load2),
-        .read_fifo(read_fifo2)
+        .read_fifo(read_fifo2),
+        .read_addr_A(read_addr_A2),
+       .read_addr_B(read_addr_B2),
+       .read_addr_A_M(read_addr_A_M2),
+       .read_addr_B_M(read_addr_B_M2),
+       .write_addr_A(write_addr_A2),
+       .write_addr_B(write_addr_B2),
+       .write_data_A(write_data_A2),
+       .write_data_B(write_data_B2),
+       .read_data_A(read_data_A2),
+       .read_data_B(read_data_B2),
+       .read_data_A_M(read_data_A_M2),
+       .read_data_B_M(read_data_B_M2)
     );
     
     //fifo to core #1
