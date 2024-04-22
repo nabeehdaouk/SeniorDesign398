@@ -20,7 +20,7 @@ module memory(
 always @(mem[2]) //For mult TB
 begin
     if (mem[2] != 0)
-    $monitor("Solution= %d \nSolution= %h \nSolution= %b \n" ,mem[2], mem[2], mem[2]);
+    $monitor("Solution= %d \nSolution= %h \nSolution= %b \nAt Time %d \n" ,mem[2], mem[2], mem[2], $time);
 end
 
 

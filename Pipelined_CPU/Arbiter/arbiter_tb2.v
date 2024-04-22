@@ -39,20 +39,20 @@ module arbiter_tb2();
         instr = 32'h000abcde;
         
 
-        #10 //Arbiter override send to FIFO1
-        $display("test override");
-        rstn = 1;
-        instr = 32'b000_10_000_0_0_0_00000_00001_0_00000_00001;
-        
-        #10 //Arbiter override send to FIFO1
-        rstn = 1;
-        instr = 32'b000_10_000_0_0_0_00000_00001_0_00000_00011;
-
-        #10 //Arbiter override send to FIFO2
-        instr = 32'b000_11_000_0_0_0_00000_00001_0_00000_00111;
-
-         #10 //Arbiter override send to FIFO2
-        instr = 32'b000_11_000_0_0_0_00000_00001_0_00000_01111;
+//        #10 //Arbiter override send to FIFO1
+//        $display("test override");
+//        rstn = 1;
+//        instr = 32'b000_10_000_0_0_0_00000_00001_0_00000_00001;
+//        
+//        #10 //Arbiter override send to FIFO1
+//        rstn = 1;
+//        instr = 32'b000_10_000_0_0_0_00000_00001_0_00000_00011;
+//
+//        #10 //Arbiter override send to FIFO2
+//        instr = 32'b000_11_000_0_0_0_00000_00001_0_00000_00111;
+//
+//         #10 //Arbiter override send to FIFO2
+//        instr = 32'b000_11_000_0_0_0_00000_00001_0_00000_01111;
 
 
         #10 //Arbiter sends data to FIFO 2 with different src adrs

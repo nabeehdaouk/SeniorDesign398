@@ -40,16 +40,16 @@ module arbiter(
             end
         end
         else begin
-            if (instr[28] == 1'b1)
+            if (instr[28] == 1'b1) //flipback1
                 begin
-                    if (instr[27] ==1'b0)
+                    if (instr[27] ==1'b0)//flipback 0
                     begin
                         fifo_1_que= {fifo_1_que[6:0], instr};
                         FIFO_1_en= 1'b1;
                         FIFO_2_en= 1'b0;
                         fifo_sel = 1'b1;
                     end
-                    if (instr[27] ==1'b1)
+                    if (instr[27] ==1'b1)//flipback 1
                     begin
                         fifo_2_que= {fifo_2_que[6:0], instr};
                         FIFO_1_en= 1'b0;

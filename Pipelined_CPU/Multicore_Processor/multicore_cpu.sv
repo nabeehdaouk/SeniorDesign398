@@ -1,4 +1,4 @@
-module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
+                        module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     input core_clk, sys_clk, picture_clk,
     input resetn,
     input [10:0] picture_radrs,
@@ -426,9 +426,9 @@ module multicore_cpu #(DATA_SIZE = 32, MEM_SIZE = 8)(
     pc pc_instance(
         .clk(gated_sys_clk),
         .resetn(resetn),
-        .branch_valid(branch_valid),     
-        .branch_address(branch_address), 
-        .fifo_full(full),
+        .branch_valid(branch_valid),    // branch_valid
+        .branch_address(branch_address), //branch_address
+        .fifo_full(full),//full
         .cnt(mem_instruction_radrs)
     );
       

@@ -1,5 +1,6 @@
-# vsim -c work.mult_tb -do "run -all; quit -f" 
-# Start time: 05:13:22 on Apr 07,2024
+# Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# vsim -gui work.mult_tb 
+# Start time: 00:59:09 on Apr 22,2024
 # Loading work.mult_tb
 # Loading work.top_level
 # Loading work.cpu2
@@ -7,32 +8,62 @@
 # Loading work.pc
 # Loading work.FileMem
 # Loading work.memory
-# run -all
+run -all
+# INSTRUCTIONS IN MEM:
+#         13
+#         15
+#          0
+# 4294967295
 # ------------------------------------------------------------------------------------------------------------
-# PROGRAMING MODE
-# PROGRAMING MULTIPLICATION TEST PROGRAM...
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
 #  
 # VALUES IN MEM:
-# hX000  -> A VALUE = 0000000d
-# hX001  -> B VALUE = 0000000f
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
 # hX002  -> C INITIAL = 00000000
-# hX00f  -> DECREMENT = ffffffff
+# hX00f  -> DECREMENT (-1) = ffffffff
 #  
 # ADRS  -> INST SRC DEST
 # hX004 -> LD MEM0 REGA_0
 # hX005 -> LD MEM1 REGA_1
 # hX006 -> LD MEM2 REGA_2
 # hX007 -> LD MEMf REGA_f
-# hX008 -> ADD REGA_0 REGA_2
+# hX008 -> NOOP
 # hX009 -> NOOP
-# hX00a -> NOOP
-# hX00b -> ADD REGA_f REGA_1
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
 # hX00c -> NOOP
 # hX00d -> NOOP
-# hX00e -> BRA ZERO ADRS010
-# hX00f -> BRA POS ADRS008
-# hX010 -> STR REGA_2 MEM2
-# RUNNING MULTIPLICATION TEST PROGRAM...
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# 4026531840
+# 4026533889
+# 4026535938
+# 4026562815
+#          0
+#          0
+# 2415923200
+#          0
+#          0
+#          0
+# 2415921167
+#          0
+#          0
+#          0
+# 3019943936
+# 3019943936
+# 2952806400
+# 2952806400
+# 3493859330
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
 # *****************************
 # CHECKING MEMORY VALUE AT LOCATION hX002
 # MULTIPLIED 13 * 15, EXP RES: 195
@@ -40,11 +71,738 @@
 # Solution=        195 
 # Solution= 000000c3 
 # Solution= 00000000000000000000000011000011 
+# At Time                 3725 
 # 
-# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(178)
-#    Time: 3240 ps  Iteration: 0  Instance: /mult_tb
-# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 178
-# Stopped at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 178
-#  quit -f
-# End time: 05:13:22 on Apr 07,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(185)
+#    Time: 4230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 185
+restart
+# Loading work.mult_tb
+run -all
+# INSTRUCTIONS IN MEM:
+#         13
+#         15
+#          0
+# 4294967295
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# 4026531840
+# 4026533889
+# 4026535938
+# 4026562815
+#          0
+#          0
+# 2415923200
+#          0
+#          0
+#          0
+# 2415921167
+#          0
+#          0
+#          0
+# 3019943936
+# 3019943936
+# 2952806400
+# 2952806400
+# 3493859330
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 13 * 15, EXP RES: 195
+# *****************************
+# Solution=        195 
+# Solution= 000000c3 
+# Solution= 00000000000000000000000011000011 
+# At Time                 3725 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(185)
+#    Time: 4230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 185
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+#         15
+#          0
+# 4294967295
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# 4026531840
+# 4026533889
+# 4026535938
+# 4026562815
+#          0
+#          0
+# 2415923200
+#          0
+#          0
+#          0
+# 2415921167
+#          0
+#          0
+#          0
+# 3019943936
+# 3019943936
+# 2952806400
+# 2952806400
+# 3493859330
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 13 * 15, EXP RES: 195
+# *****************************
+# Solution=        195 
+# Solution= 000000c3 
+# Solution= 00000000000000000000000011000011 
+# At Time                 3725 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(185)
+#    Time: 4230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 185
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+#         15
+#          0
+# 4294967295
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# 4026531840
+# 4026533889
+# 4026535938
+# 4026562815
+#          0
+#          0
+# 2415923200
+#          0
+#          0
+#          0
+# 2415921167
+#          0
+#          0
+#          0
+# 3019943936
+# 3019943936
+# 2952806400
+# 2952806400
+# 3493859330
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 13 * 15, EXP RES: 195
+# *****************************
+# Solution=        195 
+# Solution= 000000c3 
+# Solution= 00000000000000000000000011000011 
+# At Time                 3725 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(185)
+#    Time: 4230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 185
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+# Location 001,          Instruction:0000000f
+# Location 002,          Instruction:00000000
+# Location 0ff,          Instruction:ffffffff
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# Location 004,          Instruction:f0000000
+# Location 005,          Instruction:f0000801
+# Location 006,          Instruction:f0001002
+# Location 007,          Instruction:f00078ff
+# Location 008,          Instruction:00000000
+# Location 009,          Instruction:00000000
+# Location 00a,          Instruction:90001000
+# Location 00b,          Instruction:00000000
+# Location 00c,          Instruction:00000000
+# Location 00d,          Instruction:00000000
+# Location 00e,          Instruction:9000080f
+# Location 00f,          Instruction:00000000
+# Location 010,          Instruction:00000000
+# Location 011,          Instruction:00000000
+# Location 012,          Instruction:b400b000
+# Location 013,          Instruction:b400b000
+# Location 014,          Instruction:b0004000
+# Location 015,          Instruction:b0004000
+# Location 016,          Instruction:d0401002
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 13 * 15, EXP RES: 195
+# *****************************
+# Solution=        195 
+# Solution= 000000c3 
+# Solution= 00000000000000000000000011000011 
+# At Time                 3725 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(185)
+#    Time: 4230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 185
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+# Location 001,          Instruction:0000000f
+# Location 002,          Instruction:00000000
+# Location 0ff,          Instruction:ffffffff
+# Location 004,          Instruction:f0000000
+# Location 005,          Instruction:f0000801
+# Location 006,          Instruction:f0001002
+# Location 007,          Instruction:f00078ff
+# Location 008,          Instruction:00000000
+# Location 009,          Instruction:00000000
+# Location 00a,          Instruction:90001000
+# Location 00b,          Instruction:00000000
+# Location 00c,          Instruction:00000000
+# Location 00d,          Instruction:00000000
+# Location 00e,          Instruction:9000080f
+# Location 00f,          Instruction:00000000
+# Location 010,          Instruction:00000000
+# Location 011,          Instruction:00000000
+# Location 012,          Instruction:b400b000
+# Location 013,          Instruction:b400b000
+# Location 014,          Instruction:b0004000
+# Location 015,          Instruction:b0004000
+# Location 016,          Instruction:d0401002
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 13 * 15, EXP RES: 195
+# *****************************
+# Solution=        195 
+# Solution= 000000c3 
+# Solution= 00000000000000000000000011000011 
+# At Time                 3725 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(189)
+#    Time: 4230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 189
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+# Location 001,          Instruction:0000000f
+# Location 002,          Instruction:00000000
+# Location 0ff,          Instruction:ffffffff
+# Location 004,          Instruction:f0000000
+# Location 005,          Instruction:f0000801
+# Location 006,          Instruction:f0001002
+# Location 007,          Instruction:f00078ff
+# Location 008,          Instruction:00000000
+# Location 009,          Instruction:00000000
+# Location 00a,          Instruction:90001000
+# Location 00b,          Instruction:00000000
+# Location 00c,          Instruction:00000000
+# Location 00d,          Instruction:00000000
+# Location 00e,          Instruction:9000080f
+# Location 00f,          Instruction:00000000
+# Location 010,          Instruction:00000000
+# Location 011,          Instruction:00000000
+# Location 012,          Instruction:b400b000
+# Location 013,          Instruction:b400b000
+# Location 014,          Instruction:b0004000
+# Location 015,          Instruction:b0004000
+# Location 016,          Instruction:d0401002
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 13 * 15, EXP RES: 195
+# *****************************
+# Solution=        195 
+# Solution= 000000c3 
+# Solution= 00000000000000000000000011000011 
+# At Time                 3725 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(189)
+#    Time: 4230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 189
+restart
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+# Location 001,          Instruction:0000000f
+# Location 002,          Instruction:00000000
+# Location 0ff,          Instruction:ffffffff
+# Location 004,          Instruction:f0000000
+# Location 005,          Instruction:f0000801
+# Location 006,          Instruction:f0001002
+# Location 007,          Instruction:f00078ff
+# Location 008,          Instruction:00000000
+# Location 009,          Instruction:00000000
+# Location 00a,          Instruction:90001000
+# Location 00b,          Instruction:00000000
+# Location 00c,          Instruction:00000000
+# Location 00d,          Instruction:00000000
+# Location 00e,          Instruction:9000080f
+# Location 00f,          Instruction:00000000
+# Location 010,          Instruction:00000000
+# Location 011,          Instruction:00000000
+# Location 012,          Instruction:b400b000
+# Location 013,          Instruction:b400b000
+# Location 014,          Instruction:b0004000
+# Location 015,          Instruction:b0004000
+# Location 016,          Instruction:d0401002
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 13 * 15, EXP RES: 195
+# *****************************
+# Solution=        195 
+# Solution= 000000c3 
+# Solution= 00000000000000000000000011000011 
+# At Time                 3725 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(189)
+#    Time: 4230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 189
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+# Location 001,          Instruction:0000000f
+# Location 002,          Instruction:00000000
+# Location 0ff,          Instruction:ffffffff
+# Location 004,          Instruction:f0000000
+# Location 005,          Instruction:f0000801
+# Location 006,          Instruction:f0001002
+# Location 007,          Instruction:f00078ff
+# Location 008,          Instruction:00000000
+# Location 009,          Instruction:00000000
+# Location 00a,          Instruction:90001000
+# Location 00b,          Instruction:00000000
+# Location 00c,          Instruction:00000000
+# Location 00d,          Instruction:00000000
+# Location 00e,          Instruction:9000080f
+# Location 00f,          Instruction:00000000
+# Location 010,          Instruction:00000000
+# Location 011,          Instruction:00000000
+# Location 012,          Instruction:b400b000
+# Location 013,          Instruction:b400b000
+# Location 014,          Instruction:b0004000
+# Location 015,          Instruction:b0004000
+# Location 016,          Instruction:d0401002
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 13 * 15, EXP RES: 195
+# *****************************
+# Solution=        195 
+# Solution= 000000c3 
+# Solution= 00000000000000000000000011000011 
+# At Time                 3725 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(189)
+#    Time: 4230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 189
+restart
+# Loading work.mult_tb
+# Loading work.top_level
+# Loading work.cpu2
+# Loading work.psr
+# Loading work.pc
+# Loading work.FileMem
+# Loading work.memory
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+# Location 001,          Instruction:0000000f
+# Location 002,          Instruction:00000000
+# Location 0ff,          Instruction:ffffffff
+# Location 004,          Instruction:f0000000
+# Location 005,          Instruction:f0000801
+# Location 006,          Instruction:f0001002
+# Location 007,          Instruction:f00078ff
+# Location 008,          Instruction:00000000
+# Location 009,          Instruction:00000000
+# Location 00a,          Instruction:90001000
+# Location 00b,          Instruction:00000000
+# Location 00c,          Instruction:00000000
+# Location 00d,          Instruction:00000000
+# Location 00e,          Instruction:9000080f
+# Location 00f,          Instruction:00000000
+# Location 010,          Instruction:00000000
+# Location 011,          Instruction:00000000
+# Location 012,          Instruction:b400b000
+# Location 013,          Instruction:b400b000
+# Location 014,          Instruction:b0004000
+# Location 015,          Instruction:b0004000
+# Location 016,          Instruction:d0401002
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 13 * 15, EXP RES: 195
+# *****************************
+# Solution=        195 
+# Solution= 000000c3 
+# Solution= 00000000000000000000000011000011 
+# At Time                 4725 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(189)
+#    Time: 5230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 189
+restart
+# Loading work.mult_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+# Location 001,          Instruction:0000000b
+# Location 002,          Instruction:00000000
+# Location 0ff,          Instruction:ffffffff
+# Location 004,          Instruction:f0000000
+# Location 005,          Instruction:f0000801
+# Location 006,          Instruction:f0001002
+# Location 007,          Instruction:f00078ff
+# Location 008,          Instruction:00000000
+# Location 009,          Instruction:00000000
+# Location 00a,          Instruction:90001000
+# Location 00b,          Instruction:00000000
+# Location 00c,          Instruction:00000000
+# Location 00d,          Instruction:00000000
+# Location 00e,          Instruction:9000080f
+# Location 00f,          Instruction:00000000
+# Location 010,          Instruction:00000000
+# Location 011,          Instruction:00000000
+# Location 012,          Instruction:b400b000
+# Location 013,          Instruction:b400b000
+# Location 014,          Instruction:b0004000
+# Location 015,          Instruction:b0004000
+# Location 016,          Instruction:d0401002
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 11 * 13, EXP RES: 143
+# *****************************
+# Solution=        143 
+# Solution= 0000008f 
+# Solution= 00000000000000000000000010001111 
+# At Time                 4085 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(189)
+#    Time: 5230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 189

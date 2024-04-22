@@ -1,5 +1,5 @@
 # vsim -c work.arbiter_tb2 -do "run -all; quit -f" 
-# Start time: 18:57:22 on Feb 20,2024
+# Start time: 01:25:16 on Apr 22,2024
 # Loading work.arbiter_tb2
 # Loading sv_std.std
 # Loading work.arbiter
@@ -11,19 +11,14 @@
 #                   40    Instruction sent = 00000000000001111000101010111100, FIFO1 instr = 0   FIFO2 instr = 1
 #                   50    Instruction sent = 00000000000010001010101111001101, FIFO1 instr = 1   FIFO2 instr = 0
 #                   60    Instruction sent = 00000000000010101011110011011110, FIFO1 instr = 0   FIFO2 instr = 1
-# test override
-#                   70    Instruction sent = 00010000000000000000100000000001, FIFO1 instr = 1   FIFO2 instr = 0
-#                   80    Instruction sent = 00010000000000000000100000000011, FIFO1 instr = 1   FIFO2 instr = 0
-#                   90    Instruction sent = 00011000000000000000100000000111, FIFO1 instr = 0   FIFO2 instr = 1
-#                  100    Instruction sent = 00011000000000000000100000001111, FIFO1 instr = 0   FIFO2 instr = 1
 # reg collition testing
 # next 3 instr should all go into same fifo due to collisions
-#                  110    Instruction sent = 00000000000100001000000000000010, FIFO1 instr = 1   FIFO2 instr = 0
-#                  120    Instruction sent = 00100000000100000001000000010100, FIFO1 instr = 1   FIFO2 instr = 0
-#                  130    Instruction sent = 00100000000000000001010010010111, FIFO1 instr = 1   FIFO2 instr = 0
-#                  140    Instruction sent = 00100000001000010001100110010000, FIFO1 instr = 1   FIFO2 instr = 0
+#                   70    Instruction sent = 00000000000100001000000000000010, FIFO1 instr = 1   FIFO2 instr = 0
+#                   80    Instruction sent = 00100000000100000001000000010100, FIFO1 instr = 1   FIFO2 instr = 0
+#                   90    Instruction sent = 00100000000000000001010010010111, FIFO1 instr = 1   FIFO2 instr = 0
+#                  100    Instruction sent = 00100000001000010001100110010000, FIFO1 instr = 1   FIFO2 instr = 0
 # next instr should all go into OTHER fifo (src-src)
-#                  150    Instruction sent = 00100000001100001011110010000000, FIFO1 instr = 0   FIFO2 instr = 1
+#                  110    Instruction sent = 00100000001100001011110010000000, FIFO1 instr = 0   FIFO2 instr = 1
 #  quit -f
-# End time: 18:57:23 on Feb 20,2024, Elapsed time: 0:00:01
+# End time: 01:25:16 on Apr 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
