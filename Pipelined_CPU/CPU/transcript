@@ -806,3 +806,75 @@ run -all
 # ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(189)
 #    Time: 5230 ps  Iteration: 0  Instance: /mult_tb
 # Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 189
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ------------------------------------------------------------------------------------------------------------
+# PROGRAMMING MODE
+# PROGRAMMING MULTIPLICATION TEST PROGRAM...
+#  
+# VALUES IN MEM:
+# hX000  -> A VALUE = 0000000a
+# hX001  -> B VALUE = 0000000c
+# hX002  -> C INITIAL = 00000000
+# hX00f  -> DECREMENT (-1) = ffffffff
+#  
+# ADRS  -> INST SRC DEST
+# hX004 -> LD MEM0 REGA_0
+# hX005 -> LD MEM1 REGA_1
+# hX006 -> LD MEM2 REGA_2
+# hX007 -> LD MEMf REGA_f
+# hX008 -> NOOP
+# hX009 -> NOOP
+# hX00a -> ADD REGA_0 REGA_2
+# hX00b -> NOOP
+# hX00c -> NOOP
+# hX00d -> NOOP
+# hX00e -> ADD REGA_f REGA_1
+# hX00f -> NOOP
+# hX010 -> NOOP
+# hX011 -> NOOP
+# hX012 -> NOOP
+# hX013 -> BRA ZERO ADRS016
+# hX014 -> NOOP
+# hX015 -> BRA POS ADRS00a
+# hX016 -> STR REGA_2 MEM2
+# INSTRUCTIONS IN MEM:
+# Location 000,          Instruction:0000000d
+# Location 001,          Instruction:0000000b
+# Location 002,          Instruction:00000000
+# Location 0ff,          Instruction:ffffffff
+# Location 004,          Instruction:f0000000
+# Location 005,          Instruction:f0000801
+# Location 006,          Instruction:f0001002
+# Location 007,          Instruction:f00078ff
+# Location 008,          Instruction:00000000
+# Location 009,          Instruction:00000000
+# Location 00a,          Instruction:90001000
+# Location 00b,          Instruction:00000000
+# Location 00c,          Instruction:00000000
+# Location 00d,          Instruction:00000000
+# Location 00e,          Instruction:9000080f
+# Location 00f,          Instruction:00000000
+# Location 010,          Instruction:00000000
+# Location 011,          Instruction:00000000
+# Location 012,          Instruction:b400b000
+# Location 013,          Instruction:b400b000
+# Location 014,          Instruction:b0004000
+# Location 015,          Instruction:b0004000
+# Location 016,          Instruction:d0401002
+# RUNNING MULTIPLICATION TEST PROGRAM (SINGLE_CORE)...
+# *****************************
+# CHECKING MEMORY VALUE AT LOCATION hX002
+# MULTIPLIED 11 * 13, EXP RES: 143
+# *****************************
+# Solution=        143 
+# Solution= 0000008f 
+# Solution= 00000000000000000000000010001111 
+# At Time                 4085 
+# 
+# ** Note: $stop    : C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v(189)
+#    Time: 5230 ps  Iteration: 0  Instance: /mult_tb
+# Break in Module mult_tb at C:/Users/nabeehdaouk/source/repos/SeniorDesign398/Pipelined_CPU/CPU/mult_tb.v line 189
